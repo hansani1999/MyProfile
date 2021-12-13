@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment</title>
+    <link href="assets/styles/normalize.css" rel="stylesheet">
+    <style>
+        body > section {
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+            z-index: 1;
+        }
+
+        /*rectangular sections*/
+        body > section:nth-child(1) {
+            border: 5px red;
+            width: 50vw;
+            height: 50vh;
+            background: red;
+            left: 0;
+        }
+
+        body > section:nth-child(2) {
+            border: 2px red;
+            width: 50vw;
+            height: 50vh;
+            background: green;
+            right: 0;
+        }
+
+        body > section:nth-child(3) {
+            border: 2px red;
+            width: 50vw;
+            height: 50vh;
+            background: orange;
+            bottom: 0;
+        }
+
+        body > section:nth-child(4) {
+            border: 2px red;
+            width: 50vw;
+            height: 50vh;
+            background: deeppink;
+            right: 0;
+            bottom: 0;
+        }
+
+
+        body > div {
+            border: solid white;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            z-index: 3;
+        }
+
+        /*quarter circles in corners*/
+        body > div:nth-child(5) {
+            background: white;
+            border-bottom-right-radius: 100%;
+        }
+
+        body > div:nth-child(6) {
+            background: white;
+            border-bottom-left-radius: 100%;
+            right: 0;
+            top: 0;
+        }
+
+        body > div:nth-child(7) {
+            background: white;
+            border-top-left-radius: 100%;
+            right: 0;
+            bottom: 0;
+        }
+
+        body > div:nth-child(8) {
+            background: white;
+            border-top-right-radius: 100%;
+            left: 0;
+            bottom: 0;
+        }
+
+        /*half circles*/
+        body > div:nth-child(9) {
+            background: white;
+            height: 74px;
+            width: 150px;
+            border-radius: 0px 0px 300px 300px;
+            right: 0;
+            left: 0;
+            top: 0;
+            margin: auto;
+        }
+
+        body > div:nth-child(10) {
+            background: white;
+            height: 74px;
+            width: 150px;
+            border-radius: 300px 300px 0px 0px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        /*square at centre*/
+        body > div:nth-child(11) {
+            left: 42%;
+            background: white;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        body > div:nth-child(11) > div:nth-child(1) {
+            right: -22.5%;
+            background: red;
+            bottom: -44px;
+            width: 112px;
+            height: 112px;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 100%;
+        }
+
+
+        /*circles in rectangular sections*/
+        body > section:nth-child(1) > div {
+            width: 200px;
+            height: 200px;
+            background: white;
+            z-index: 6;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 100%;
+        }
+
+        body > section:nth-child(2) > div {
+            width: 200px;
+            height: 200px;
+            background: white;
+            z-index: 6;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 100%;
+        }
+
+        body > section:nth-child(3) > div {
+            width: 200px;
+            height: 200px;
+            background: white;
+            z-index: 6;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 100%;
+        }
+
+        body > section:nth-child(4) > div {
+            width: 200px;
+            height: 200px;
+            background: white;
+            z-index: 6;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 100%;
+        }
+
+        /**/
+        body > section:nth-child(1) > div > div:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            background: red;
+            position: absolute;
+            z-index: 8;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        body > section:nth-child(3) > div > div:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            background: red;
+            z-index: 8;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        body > section:nth-child(2) > div > div:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            background: red;
+            z-index: 8;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+
+        body > section:nth-child(4) > div > div:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            background: red;
+            z-index: 8;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <div>
+        <div></div>
+    </div>
+</section>
+<section>
+    <div>
+        <div></div>
+    </div>
+</section>
+<section>
+    <div>
+        <div></div>
+    </div>
+</section>
+<section>
+    <div>
+        <div></div>
+    </div>
+</section>
+
+<!--circles in corners-->
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+<!--half circles-->
+<div></div>
+<div></div>
+
+<!--middle square-->
+<div>
+    <div></div>
+</div>
+</body>
+
+
+</html>
