@@ -4,20 +4,83 @@
     <meta charset="UTF-8">
     <title>MyProfile</title>
     <link href="assets/icons/favIcon.png" rel="icon">
-    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/css/styles.css">
+    <link rel="stylesheet" href="assets/styles/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Signika+Negative:wght@600&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/css/fonts/css/all.css">
+
+    <style>
+        .main{
+            background-color: #1d1212;
+            color: white;
+        }
+
+        /*Header start*/
+        body>header{
+            background: #e46d2a;
+            position: fixed;
+            height: 60px;
+            width: 1519px;
+            /*box-shadow: -2px 6px 9px -4px white;*/
+            top: 0;
+        }
+
+        .navigationBar{
+            list-style: none;
+            position: fixed;
+            font-family: 'Ubuntu', sans-serif;
+            right: 30px;
+            height: 50px;
+            margin-top: 0;
+        }
+
+        body>header>nav>ul>li{
+            display: inline-block;
+            padding: 0 10px 0 10px;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        body>header>nav>ul>li:hover{
+            cursor: pointer;
+            color: black;
+        }
+
+        body>header>nav>ul>li>a:hover{
+            cursor: pointer;
+            color: black;
+        }
+
+        body>header>nav>ul>li>a{
+            text-decoration: none;
+            color: white;
+            margin-left: 4px;
+        }
+        /*Header End*/
+
+        /*main{
+            position: relative;
+        }*/
+
+        main>section{
+            /*border: 2px solid red;*/
+        }
+    </style>
 
 </head>
 <body class="main">
 <header>
     <nav>
         <ul class="navigationBar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#edu">Education</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#activ">Activities</a></li>
-            <li><a href="">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><i class="fas fa-home"></i><a href="#home">Home</a></li>
+            <li><i class="fas fa-info-circle"></i><a href="#about">About</a></li>
+            <li><i class="fas fa-graduation-cap"></i><a href="#edu">Education</a></li>
+            <li><i class="fas fa-trophy"></i><a href="#Skills">Skills</a></li>
+            <li><i class="fas fa-dice"></i><a href="#activ">Activities</a></li>
+            <li><i class="fab fa-black-tie"></i><a href="">Experience</a></li>
+            <li><i class="fas fa-address-book"></i><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -94,6 +157,7 @@
         <section>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eaque enim illum in incidunt iusto magnam
                 nemo numquam quae ullam? Accusamus aut delectus minima nisi quae rerum. Dignissimos, iure labore.</p>
+
         </section>
         <section></section>
     </section>
