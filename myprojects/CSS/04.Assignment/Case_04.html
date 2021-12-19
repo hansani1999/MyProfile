@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case_04</title>
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/css/all.css">
+    <style>
+        body>section{
+            height: 100vh;
+            position: relative;
+        }
+
+        body>section>header{
+            color: white;
+            height: 50px;
+            font-size: 20px;
+            font-family: 'Ubuntu', sans-serif;
+            position: sticky;
+            margin-top: 0;
+            margin-bottom: 0;
+            top: 0;
+        }
+
+        body>section>header>h1{
+            font-size: 20px;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            padding-left: 10px;
+        }
+
+        body>section:nth-child(1)>header{
+            background: red;
+        }
+
+        body>section:nth-child(2)>header{
+            background: #153aaa;
+        }
+
+        body>section:nth-child(3)>header{
+            background: #4a3a3a;
+        }
+
+        body>section:nth-child(4)>header{
+            background: brown;
+        }
+
+        body>section>section{
+            color: black;
+            font-size: 100px;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+            height: 672px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body>section:nth-child(1)>section{
+            background: white;
+        }
+
+        body>section:nth-child(2)>section{
+            background: cornflowerblue;
+        }
+
+        body>section:nth-child(3)>section{
+            background: #808080;
+        }
+
+        body>section:nth-child(4)>section{
+            background: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <h1>Card 1</h1>
+        </header>
+        <section>Hello</section>
+
+    </section>
+    <section>
+        <header>
+            <h1>Card 2</h1>
+        </header>
+        <section>How</section>
+    </section>
+    <section>
+        <header>
+            <h1>Card 3</h1>
+        </header>
+        <section>Are</section>
+    </section>
+    <section>
+        <header>
+            <h1>Card 4</h1>
+        </header>
+        <section>You..?</section>
+    </section>
+</body>
+</html>
