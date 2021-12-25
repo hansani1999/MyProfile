@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case-01</title>
+    <link rel="stylesheet" href="assets/css/style/normalize.css">
+    <link rel="stylesheet" href="assets/css/fonts/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<style>
+    section{
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+
+    section>div{
+        position: relative;
+        background: blueviolet;
+        font-family: 'Ubuntu',sans-serif;
+        font-size: 15px;
+        height: 50px;
+        width: 200px;
+        left: -150px;
+        box-shadow: 1px 2px 3px 2px #3a483b;
+        margin-bottom: 30px;
+        transition-property: all;
+        transition-duration: 1s;
+    }
+
+    section>div>i{
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        color: white;
+    }
+
+    section>div>h3{
+        position: absolute;
+        left: 30px;
+        top: -6px;
+        color: white;
+    }
+
+    section>div:hover{
+        left: 0;
+        cursor: pointer;
+        background: linear-gradient(to right,blueviolet,cornflowerblue,deeppink);
+        transition-property: all;
+        transition-duration: 1s;
+    }
+
+</style>
+<body>
+    <section>
+        <div><i class="fas fa-address-book"></i>
+            <h3>Menu One</h3>
+        </div>
+        <div><i class="fas fa-ambulance"></i>
+            <h3>Menu Two</h3>
+        </div>
+        <div><i class="fas fa-atlas"></i>
+            <h3>Menu Three</h3>
+        </div>
+        <div><i class="fas fa-archive"></i>
+            <h3>Menu Four</h3>
+        </div>
+        <div><i class="fas fa-cart-arrow-down"></i>
+            <h3>Menu Five</h3>
+        </div>
+    </section>
+</body>
+</html>
