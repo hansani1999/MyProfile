@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case-02</title>
+    <style>
+        section{
+            /*height: 700px;
+            position: relative;*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            /*border: 15px solid grey;*/
+            background: lightseagreen;
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            /*border-top: 10px solid red;*/
+        }
+
+
+
+        section>h1{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            color: white;
+            width: max-content;
+            height: max-content;
+        }
+
+        section::after{
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border: 20px solid grey;
+            border-radius: 100%;
+            border-top: 20px solid red;
+        }
+
+        section:hover::after{
+            transform: rotate(360deg);
+            transition: all 1s;
+            cursor: pointer;
+        }
+
+        /*section:hover h1{
+            transform: rotate(-360deg);
+            transition: all 1s;
+        }*/
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>RWAD</h1>
+    </section>
+</body>
+</html>
