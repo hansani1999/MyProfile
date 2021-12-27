@@ -36,6 +36,25 @@
             margin-top: 0;
         }
 
+
+        header + main{
+            padding-top: 50px;
+        }
+
+       /* main>section{
+            padding-top: 50px;
+            border: 2px solid red;
+        }*/
+
+        /*main>section:nth-child(1){
+            padding-top: 0px !important;
+        }*/
+
+        /*main>section:nth-child(2){*/
+        /*    padding-top: 50px;*/
+        /*}*/
+
+
         body>header>nav>ul>li{
             display: inline-block;
             padding: 0 10px 0 10px;
@@ -60,12 +79,18 @@
         }
         /*Header End*/
 
-        /*main{
-            position: relative;
-        }*/
+        main{
+            /*border: 2px solid blue;*/
+        }
 
         main>section{
             /*border: 2px solid red;*/
+            padding-top: 50px;
+            margin-top: 60px;
+        }
+
+        main>section:nth-child(1){
+            margin-top: 0;
         }
     </style>
 
@@ -99,8 +124,8 @@
             </div>
         </section>
     </section>
-    <section>
-        <h1 id ="about">About</h1>
+    <section id ="about">
+        <h1 >About</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias debitis dolorum excepturi harum illum
             iste, magni sint vero? Assumenda beatae eligendi esse eveniet fuga ipsa quidem sed ut, voluptate?</p>
         <!--box 1-->
@@ -133,8 +158,8 @@
         </article>
 
     </section>
-    <section>
-        <h1 id="edu">Education</h1>
+    <section id="edu">
+        <h1>Education</h1>
         <article>
             <h4>2020 - present</h4>
             <p>Studies at IJSE-Institute of Software Engineering</p>
@@ -152,8 +177,8 @@
             <p>Started my school education at Galle Siridhamma College</p>
         </article>
     </section>
-    <section>
-        <h1 id="Skills">Skills</h1>
+    <section id="Skills">
+        <h1>Skills</h1>
         <section>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eaque enim illum in incidunt iusto magnam
                 nemo numquam quae ullam? Accusamus aut delectus minima nisi quae rerum. Dignissimos, iure labore.</p>
@@ -161,8 +186,8 @@
         </section>
         <section></section>
     </section>
-    <section>
-        <h3 id="mProj">My Projects</h3>
+    <section id="mProj">
+        <h3>My Projects</h3>
         <!--image icon-->
        <div>
             <figure>
@@ -173,8 +198,8 @@
        </div>
         <!--image icon-->
     </section>
-    <section>
-        <h1 id="activ">Activities</h1>
+    <section id="activ">
+        <h1>Activities</h1>
         <section>
 
         </section>
@@ -185,8 +210,8 @@
         </section>
     </section>
 </main>
-<footer>
-    <h1 id="contact">Contact</h1>
+<footer id="contact">
+    <h1>Contact</h1>
     <section>
         <!--Form-->
         <fieldset>

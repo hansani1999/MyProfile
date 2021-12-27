@@ -1,5 +1,6 @@
-**This is my Profile**
+**My Profile**
 
-IJSE - Institute of Java Software Engineering
-
-![GitHub Logo](assets/images/ocean%204.jpg)
+Hi..! I,m Hansani.
+I'm an undergraduate student in Software Engineering.
+ MyProfile elaborates an overview of my skills as an undergraduate,
+ education, my activities and interests as a young seeker in Professional Industry.
