@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case-01(Animations)</title>
+    <style>
+        div{
+            width: 160px;
+            height: 75px;
+            background: blue;
+            border-radius: 20px 20px 20px 20px;
+            position: relative;
+            animation-name: change;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes change {
+            0%{
+                left: 0px;
+                top: 0;
+                background: red;
+            }
+            25%{
+                left: 1000px;
+                top: 0;
+                transform: rotate(180deg);
+                background: yellow;
+            }
+
+            50%{
+                left: 1000px;
+                top: 500px;
+                transform: rotate(360deg);
+                background: blueviolet;
+            }
+
+            75%{
+                left: 0;
+                top: 500px;
+                transform: rotate(180deg);
+                background: lightseagreen;
+            }
+
+            100%{
+                left: 0px;
+                top: 0;
+                background: orange;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+    </section>
+</body>
+</html>
