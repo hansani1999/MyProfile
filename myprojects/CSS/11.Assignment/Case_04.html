@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case_04_car_animation</title>
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <style>
+        section{
+            position: relative;
+            height: 718px;
+        }
+
+        div{
+            position: absolute;
+        }
+
+        section>div:nth-child(1){
+            height: 420px;
+            background-image: url(assets/images/sky.jpg);
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        section>div:nth-child(2){
+            height: 250px;
+            background-image: url(assets/images/city.png);
+            top: 171px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 5;
+            animation-name: move;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+
+        section>div:nth-child(3){
+            height: 301px;
+            background-image: url(assets/images/road.jpg);
+            top: 420px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 5;
+            animation-name: move;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+
+        section>div:nth-child(4){
+            width: 434px;
+            height: 181px;
+            background-image: url("assets/images/car.png");
+            background-size: cover;
+            top: 345px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 6;
+        }
+
+        section>div:nth-child(5){
+            width: 85px;
+            height: 85px;
+            background-image: url("assets/images/wheel.png");
+            background-size: cover;
+            top: 436px;
+            right: 597px;
+            margin: auto;
+            z-index: 7;
+            animation-name: rotateWheels;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+
+        section>div:nth-child(6){
+            width: 85px;
+            height: 85px;
+            background-image: url("assets/images/wheel.png");
+            background-size: cover;
+            top: 436px;
+            right: 864px;
+            margin: auto;
+            z-index: 7;
+            animation-name: rotateWheels;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes move {
+            0%{
+                margin-left: 0;
+            }
+
+            100%{
+                margin-left: -200vw;
+            }
+        }
+
+        @keyframes rotateWheels {
+            0%{
+                transform: rotate(0deg);
+            }
+
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>
