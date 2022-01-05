@@ -349,9 +349,9 @@
 
         /*About starts*/
         #about{
-            border: 2px solid red;
             font-family: 'Barlow', sans-serif;
             padding: 22px;
+            height: 600px;
         }
 
         #about>h1{
@@ -361,12 +361,63 @@
         }
 
         #about>p{
+            position: absolute;
+            top: 140px;
+            margin-left: 20px;
+        }
+
+        #about>h2{
+            position: absolute;
+            top: 190px;
+            margin-left: 20px;
+        }
+
+        #about>article{
+            border: 2px solid darkgray;
+            border-radius: 40px;
+            position: absolute;
+            width: 600px;
+            height: 120px;
+            margin: 40px;
+            padding: 10px;
+        }
+
+        #about>article>div{
+            width: 300px;
+        }
+
+        #about>article>h4{
+            background: linear-gradient(to bottom,deepskyblue,lightsteelblue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 18px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        #about>article:nth-child(4){
+            left: 0;
+            top: 240px;
+        }
+
+        #about>article:nth-child(5){
+            left: 0;
+            bottom: 0;
+        }
+
+        #about>article:nth-child(6){
+            right: 0;
+            top: 240px;
+        }
+
+        #about>article:nth-child(7){
+            right: 0;
+            bottom: 0;
         }
         /*About Ends*/
 
         /*Education Starts*/
         #edu{
-            border: 2px solid red;
+            /*border: 2px solid red;*/
             font-family: 'Barlow', sans-serif;
             padding: 22px;
         }
@@ -485,35 +536,28 @@
     </section>
     <section id ="about">
         <h1 >About</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias debitis dolorum excepturi harum illum
-            iste, magni sint vero? Assumenda beatae eligendi esse eveniet fuga ipsa quidem sed ut, voluptate?</p>
+        <p>I'm a<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias debitis dolorum excepturi harum illum
+            iste, magni sint vero? </p>
+        <h2>What I do..,</h2>
         <!--box 1-->
         <article>
             <h4>Web Application Development</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore est fugit illo ipsa nesciunt? Animi
-                beatae corporis dicta dolor doloremque, dolorum, minus molestiae perferendis perspiciatis qui repellat
-                sint, ut vel.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore est fugit illo ipsa nesciunt.</p>
         </article>
         <!--box 2-->
         <article>
             <h4>Stand Alone Application Development</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, explicabo iusto minima nostrum nulla
-                possimus praesentium quidem tempora voluptatibus voluptatum. Architecto blanditiis delectus eius esse
-                exercitationem ipsa minima nemo quidem?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, explicabo iusto minima nostrum.</p>
         </article>
         <!--box 3-->
         <article>
             <h4>Database Management</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias distinctio ex natus quas qui,
-                quibusdam quis repudiandae vel. Aliquid doloremque eligendi harum illo nam numquam soluta tenetur
-                veritatis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias distinctio ex natus quas qui.</p>
         </article>
         <!--box 4-->
         <article>
             <h4>SEO</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolorum error minus modi molestiae quia
-                ratione rem unde, velit veritatis! Alias, aperiam corporis distinctio est inventore maxime quidem rem
-                similique!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolorum </p>
         </article>
 
     </section>
