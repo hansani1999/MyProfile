@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>MyProfile</title>
     <link href="assets/icons/favIcon.png" rel="icon">
+    <meta content="width=device-width initial-scale=1" name="viewport">
     <link rel="stylesheet" href="assets/css/fonts/css/all.css">
     <!--<link rel="stylesheet" href="assets/css/styles.css">-->
     <link rel="stylesheet" href="assets/css/normalize.css">
@@ -27,15 +28,33 @@
             background: #e46d2a;
             position: fixed;
             height: 60px;
-            width: 1519px;
+            /*width: 1519px;*/
             /*box-shadow: -2px 6px 9px -4px white;*/
             top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
             z-index: 3;
         }
 
+        body>header>nav{
+            border: 2px solid blue;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
         .navigationBar{
+            border: 2px solid red;
             list-style: none;
-            position: fixed;
+            position: absolute;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background: #e46d2a;
             font-family: 'Ubuntu', sans-serif;
             right: 30px;
             height: 50px;
@@ -49,16 +68,18 @@
 
 
         body>header>nav>ul>li{
+            /*border: 2px solid white;*/
+            height: 39px;
             display: inline-block;
             padding: 0 10px 0 10px;
             margin-top: 20px;
             font-size: 18px;
         }
 
-        body>header>nav>ul>li:hover{
+        /*body>header>nav>ul>li:hover{
             cursor: pointer;
             color: black;
-        }
+        }*/
 
         body>header>nav>ul>li>a:hover{
             cursor: pointer;
@@ -103,15 +124,6 @@
             display: flex;
         }
 
-        #home>section:nth-child(2){
-            /*border: 2px solid red;*/
-            height: 689px;
-            /* width: 1271px; */
-            position: relative;
-            margin-top: -50px;
-            margin-left: 399px;
-        }
-
         #home>section:nth-child(1):hover .overlay{
             background: #E88A55;
             position: absolute;
@@ -139,6 +151,7 @@
             /*margin: auto;*/
         }
 
+
         #home>section:nth-child(1)>div:nth-child(2){
             /*border: 2px solid blue;*/
             position: absolute;
@@ -152,6 +165,27 @@
             width: 400px;
             z-index: 9;
         }
+
+
+        #home>section:nth-child(2){
+            /*border: 2px solid red;*/
+            /*height: 689px;
+            width: 1271px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            margin-top: -50px;
+            margin-left: 399px;*/
+            /*border: 2px solid red;*/
+            /* width: 1271px; */
+            height: 689px;
+            position: relative;
+            margin-top: -50px;
+            margin-left: 399px;
+        }
+
 
         #home>section>div>h1{
             z-index: 2;
@@ -174,7 +208,7 @@
         }
 
         #home>section:nth-child(2)>div{
-            /*border: 2px solid pink;*/
+            border: 2px solid pink;
             background-image: url("assets/images/coverImg.png");
             background-size: cover;
             height: 400px;
@@ -227,7 +261,7 @@
         }
 
         #home>div{
-            /*border: 2px solid red;*/
+            border: 2px solid red;
             height: 295px;
             position: absolute;
             bottom: 0;
@@ -618,6 +652,7 @@
             border: 2px solid red;
             font-family: 'Barlow', sans-serif;
             padding: 22px;
+            height: 700px;
         }
 
         #Skills>h1{
@@ -625,6 +660,298 @@
             font-family: 'Ubuntu', sans-serif;
             margin-bottom: 5px;
         }
+
+        #Skills>section:nth-child(2){
+            border: 4px solid plum;
+            width: 200px;
+            padding: 10px;
+            position: absolute;
+            top: 200px;
+            margin: auto;
+            height: 450px;
+            border-radius: 30px;
+        }
+
+        #Skills>section:nth-child(3){
+            border: 2px solid red;
+            position: absolute;
+            width:1200px;
+            height: 560px;
+            right: 20px;
+            top: 110px;
+        }
+
+        .skillTree>div:nth-child(1){
+            border: 2px solid lightgoldenrodyellow;
+            border-radius: 46%;
+            background-image: url("assets/images/shield.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 164px;
+            height: 200px;
+            position: absolute;
+            top: 92px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .skillTree>div>div:nth-child(1){
+            background-color: white;
+            width: 10px;
+            height: 150px;
+            position: absolute;
+        }
+
+        .skillTree>div:nth-child(2)>div:nth-child(1){
+            top: 250px;
+            left: 435px;
+            transform: rotate(90deg);
+        }
+
+        .skillTree>div:nth-child(2)>p{
+            /*border: 2px solid green;*/
+            position: absolute;
+            top: 275px;
+            left: 423px;
+        }
+
+        .skillTree>div:nth-child(3)>p{
+            /*border: 2px solid green;*/
+            position: absolute;
+            left: 442px;
+            top: 194px;
+            transform: rotate(26deg);
+        }
+
+        .skillTree>div:nth-child(4)>p{
+            /*border: 2px solid green;*/
+            position: absolute;
+            left: 507px;
+            top: 138px;
+            transform: rotate(59deg);
+        }
+
+        .skillTree>div:nth-child(4)>p{
+            /*border: 2px solid green;*/
+            position: absolute;
+            left: 507px;
+            top: 138px;
+            transform: rotate(59deg);
+        }
+
+        .skillTree>div:nth-child(5)>p{
+            /*border: 2px solid green;*/
+            position: absolute;
+            right: 512px;
+            top: 133px;
+            transform: rotate(-59deg);
+        }
+
+        .skillTree>div:nth-child(6)>p{
+            /*border: 2px solid green;*/
+            position: absolute;
+            right: 442px;
+            top: 194px;
+            transform: rotate(-26deg);
+        }
+
+        .skillTree>div:nth-child(7)>p{
+            /*border: 2px solid green;*/
+            position: absolute;
+            top: 275px;
+            right: 423px;
+        }
+
+        .skillTree>div:nth-child(3)>div:nth-child(1){
+            top: 250px;
+            right: 435px;
+            transform: rotate(90deg);
+        }
+
+        .skillTree>div:nth-child(4)>div:nth-child(1){
+            right: 450px;
+            top: 170px;
+            transform: rotate(-112deg);
+        }
+
+        .skillTree>div:nth-child(5)>div:nth-child(1){
+            left: 450px;
+            top: 170px;
+            transform: rotate(112deg);
+        }
+
+
+        .skillTree>div:nth-child(6)>div:nth-child(1){
+            left: 514px;
+            top: 94px;
+            transform: rotate(149deg);
+        }
+        .skillTree>div:nth-child(7)>div:nth-child(1){
+            right: 514px;
+            top: 94px;
+            transform: rotate(-149deg);
+        }
+
+
+        /*.skillTree>div:nth-child(2){
+            !*background-color: white;*!
+            border-radius: 30px 30px 0 0;
+            !*width: 10px;
+            height: 150px;
+            position: absolute;*!
+            left: 322px;
+            right: 0;
+            top: 250px;
+            margin: auto;
+            transform: rotate(90deg);
+        }
+
+        .skillTree>div:nth-child(3){
+            background-color: white;
+            border-radius: 0 0 30px 30px;
+            width: 10px;
+            height: 150px;
+            position: absolute;
+            right: 322px;
+            left: 0;
+            top: 250px;
+            margin: auto;
+            transform: rotate(90deg);
+        }
+
+        .skillTree>div:nth-child(4){
+            background-color: white;
+            border-radius: 0 0 30px 30px;
+            width: 10px;
+            height: 150px;
+            position: absolute;
+            right: 292px;
+            left: 0;
+            top: 171px;
+            margin: auto;
+            transform: rotate(110deg);
+        }
+
+        .skillTree>div:nth-child(5){
+            background-color: white;
+            border-radius: 0 0 30px 30px;
+            width: 10px;
+            height: 150px;
+            position: absolute;
+            left: 292px;
+            right: 0;
+            top: 171px;
+            margin: auto;
+            transform: rotate(-110deg);
+        }
+
+        .skillTree>div:nth-child(6){
+            background-color: white;
+            border-radius: 0 0 30px 30px;
+            width: 10px;
+            height: 150px;
+            position: absolute;
+            left: 150px;
+            right: 0;
+            top: 89px;
+            margin: auto;
+            transform: rotate(-149deg);
+        }
+
+        .skillTree>div:nth-child(7){
+            background-color: white;
+            border-radius: 0 0 30px 30px;
+            width: 10px;
+            height: 150px;
+            position: absolute;
+            right: 150px;
+            left: 0;
+            top: 89px;
+            margin: auto;
+            transform: rotate(149deg);
+        }
+
+
+        .skillTree>div:nth-child(14){
+            border: 2px solid red;
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            background-image: url("assets/images/mysql-logo.png");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+        }
+
+        .skillTree>div:nth-child(15){
+            border: 2px solid red;
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            background-image: url("assets/images/java_logo.jpg");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+        }
+
+
+        .skillTree>div:nth-child(16){
+            border: 2px solid red;
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            background-image: url("assets/images/hibernate logo.jpg");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+        }
+
+        .skillTree>div:nth-child(17){
+            border: 2px solid red;
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            background-image: url("assets/images/html.png");
+            background-color: white;
+            background-size: contain;
+            background-position: center;
+            position: absolute;
+        }
+
+        .skillTree>div:nth-child(18){
+            border: 2px solid red;
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            background-image: url("assets/images/CSS-logo.png");
+            background-size: contain;
+            background-position: center;
+            position: absolute;
+        }
+
+        .skillTree>div:nth-child(19){
+            border: 2px solid red;
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            background-image: url("assets/images/javaScript logo.png");
+            background-size: contain;
+            background-position: center;
+            position: absolute;
+        }
+
+        .skillTree>div:nth-child(20){
+            border: 2px solid red;
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            background-image: url("assets/images/javaScript logo.png");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+        }*/
         /*Skills Ends*/
 
         /*MyProjects Starts*/
@@ -665,13 +992,13 @@
 <header>
     <nav>
         <ul class="navigationBar">
-            <li><i class="fas fa-home"></i><a href="#home">Home</a></li>
-            <li><i class="fas fa-info-circle"></i><a href="#about">About</a></li>
-            <li><i class="fas fa-graduation-cap"></i><a href="#edu">Education</a></li>
-            <li><i class="fas fa-trophy"></i><a href="#Skills">Skills</a></li>
-            <li><i class="fas fa-dice"></i><a href="#activ">Activities</a></li>
-            <li><i class="fab fa-black-tie"></i><a href="">Experience</a></li>
-            <li><i class="fas fa-address-book"></i><a href="#contact">Contact</a></li>
+            <li><a href="#home"><i class="fas fa-home"></i>HOME</a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i>ABOUT</a></li>
+            <li><a href="#edu"><i class="fas fa-graduation-cap"></i>EDUCATION</a></li>
+            <li><a href="#Skills"><i class="fas fa-trophy"></i>SKILLS</a></li>
+            <li><a href="#activ"><i class="fas fa-dice"></i>ACTIVITIES</a></li>
+            <!--<li><i class="fab fa-black-tie"></i><a href="">Experience</a></li>-->
+            <li><a href="#contact"><i class="fas fa-address-book"></i>CONTACT</a></li>
         </ul>
     </nav>
 </header>
@@ -685,8 +1012,8 @@
             </div>
 
             <div></div>
-
         </section>
+
         <section>
             <div>
                 <!--image-->
@@ -716,8 +1043,8 @@
             <div></div>
             <div></div>
         </div>
-
     </section>
+
     <section id ="about">
         <h1 >About</h1>
         <p>I'm a<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias debitis dolorum excepturi harum illum
@@ -770,7 +1097,7 @@
             <p>Studies at IJSE-Institute of Software Engineering</p>
         </article>
         <article>
-            <h4>2018-2020</h4>
+            <h4>2018 - 2020</h4>
             <p>Completed my school education in 2018 at Galle Siridhamma College ,<br> got ABB from GCE A/L Examination in 2020</p>
         </article>
         <article>
@@ -784,12 +1111,61 @@
     </section>
     <section id="Skills">
         <h1>Skills</h1>
-        <section>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eaque enim illum in incidunt iusto magnam
-                nemo numquam quae ullam? Accusamus aut delectus minima nisi quae rerum. Dignissimos, iure labore.</p>
+            <section>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eaque enim illum in incidunt iusto magnam
+                    nemo numquam quae ullam? Accusamus aut delectus minima nisi quae rerum. Dignissimos, iure labore.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi architecto asperiores consequatur,
+                    cumque dolorem doloremque esse eveniet illo itaque, labore libero modi numquam porro quas quod sunt
+                    tempora voluptate.</p>
+            </section>
 
+        <section class="skillTree">
+            <!--center image-->
+            <div></div>
+
+            <!--circle image sets-->
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <p>MySQL</p>
+            </div>
+
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <p>Java</p>
+            </div>
+
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <p>Hibernate</p>
+            </div>
+
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <p>HTML</p>
+            </div>
+
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <p>CSS</p>
+            </div>
+
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <p>JavaScript</p>
+            </div>
         </section>
-        <section></section>
     </section>
     <section id="mProj">
         <h3>My Projects</h3>
