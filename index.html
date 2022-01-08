@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Bowlby+One+SC&family=Lobster&family=Monda:wght@700&family=Signika+Negative:wght@600&display=swap" rel="stylesheet">
+
     <style>
         .main{
             background-color: #1d1212;
@@ -390,9 +391,9 @@
         }
 
         #about>h1{
-           font-size: 70px;
-           font-family: 'Ubuntu', sans-serif;
-           margin-bottom: 5px;
+            font-size: 70px;
+            font-family: 'Ubuntu', sans-serif;
+            margin-bottom: 5px;
         }
 
         #about>div{
@@ -704,7 +705,7 @@
             bottom: 50px;
         }
 
-            /*branches starts*/
+        /*branches starts*/
         .skillTree .branch{
             /*border: 2px solid red;*/
             height: 100px;
@@ -901,7 +902,7 @@
             left: 142px;
             transform: rotate(180deg);
         }
-            /*branches ends*/
+        /*branches ends*/
         /*Skills Ends*/
 
         /*MyProjects Starts*/
@@ -909,6 +910,7 @@
             border: 2px solid red;
             font-family: 'Barlow', sans-serif;
             padding: 22px;
+            height: 700px;
         }
 
         #mProj>h3{
@@ -930,11 +932,146 @@
             font-family: 'Ubuntu', sans-serif;
             margin-bottom: 5px;
         }
+
+        #activ .hexagon{
+            border: 2px solid red;
+            height: 400px;
+            width: 400px;
+        }
+
+        #activ .hexagon>div:hover{
+            transform: scale(1.1);
+            transition: all;
+            transition-duration: 0.3s;
+        }
+
+        #activ .hexagon>div:nth-child(1){
+            /*border: 50px solid green;*/
+            /*background-color: red;*/
+            /*border-top: 100px solid #346FB0;*/
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 211px;
+            left: 129px;
+            border-top: 150px solid red;
+            border-right:90px solid transparent;
+            border-left: 90px solid transparent;
+        }
+
+        #activ .hexagon>div:nth-child(2){
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 217px;
+            left: 229px;
+            /*border-top: 100px solid #346FB0;*/
+            border-bottom: 150px solid #8e44ad;
+            border-right:90px solid transparent;
+            border-left: 90px solid transparent;
+        }
+
+        #activ .hexagon>div:nth-child(3){
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 217px;
+            left: 29px;
+            /*border-top: 100px solid #346FB0;*/
+            border-bottom: 150px solid #e1b12c;
+            border-right:90px solid transparent;
+            border-left: 90px solid transparent;
+        }
+
+        #activ .hexagon>div:nth-child(4){
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 377px;
+            left: 31px;
+            /*border-top: 100px solid #346FB0;*/
+            border-top: 150px solid #e67e22;
+            border-right:90px solid transparent;
+            border-left: 90px solid transparent;
+        }
+
+        #activ .hexagon>div:nth-child(5){
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 381px;
+            left: 131px;
+            /*border-top: 100px solid #346FB0;*/
+            border-bottom: 150px solid #00cec9;
+            border-right:90px solid transparent;
+            border-left: 90px solid transparent;
+        }
+
+        #activ .hexagon>div:nth-child(6){
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 378px;
+            left: 231px;
+            /*border-top: 100px solid #346FB0;*/
+            border-top: 150px solid #2ed573;
+            border-right:90px solid transparent;
+            border-left: 90px solid transparent;
+        }
+
+        /**#activ .hexagon>div:nth-child(1)::after{
+            content: "A";
+            opacity: 0;
+            position: absolute;
+            background: #a148a1;
+        }
+
+        #activ .hexagon>div:nth-child(1):hover::after{
+            opacity: 100%;
+            background: #a148a1;
+            transform: scale(1);
+            left: 700px;
+            width: 200px;
+            height: 200px;
+        }
+
+        #activ .hexagon>div:nth-child(1):hover{
+            transform: scale(1.1);
+        }
+
+        #activ .hexagon>div:nth-child(1)>div{
+            !*background: #346FB0;
+            width: 100px;
+            height: 100px;
+            position: absolute;*!
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: 130px;
+            border-top: 120px solid red;
+            border-right:90px solid transparent;
+            border-left: 90px solid transparent;
+        }
+
+        #activ .hexagon>div:nth-child(1)>div::after{
+            content: "B";
+            background: red;
+            position: absolute;
+            opacity: 0;
+        }
+
+        #activ .hexagon>div:nth-child(1)>div:hover::after{
+            width: 200px;
+            height: 200px;
+            opacity: 100%;
+            transform: scale(1);
+            background: #a148a1;
+            background-size: cover;
+            left: 900px;
+        }*/
         /*Activities Ends*/
 
         /*Main Ends*/
-
-
     </style>
 
 </head>
@@ -1132,10 +1269,17 @@
     </section>
     <section id="activ">
         <h1>Activities</h1>
-        <section>
-
+        <section class="hexagon">
+            <div>
+                <div></div>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </section>
-        <section>
+        <section class="desc">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam architecto asperiores
                 deserunt earum est, in, incidunt ipsa iste labore molestiae nesciunt nostrum officia praesentium quasi
                 suscipit vel? In, sapiente.</p>
