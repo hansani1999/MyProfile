@@ -673,7 +673,7 @@
         }
 
         #Skills>section:nth-child(3){
-            border: 2px solid red;
+            /*border: 2px solid red;*/
             position: absolute;
             width:1200px;
             height: 560px;
@@ -681,6 +681,7 @@
             top: 110px;
         }
 
+        /*center image*/
         .skillTree>div:nth-child(1){
             border: 2px solid lightgoldenrodyellow;
             border-radius: 46%;
@@ -697,261 +698,210 @@
             margin: auto;
         }
 
-        .skillTree>div>div:nth-child(1){
-            background-color: white;
-            width: 10px;
-            height: 150px;
+        .skillTree>p{
             position: absolute;
+            right: 200px;
+            bottom: 50px;
+        }
+
+            /*branches starts*/
+        .skillTree .branch{
+            /*border: 2px solid red;*/
+            height: 100px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skillTree .branch>div{
+            /*border: 2px solid green;*/
+            flex-basis: 100px;
+        }
+
+        .skillTree .branch>div:nth-child(1){
+            border-radius: 100%;
+            height: 100px;
+        }
+
+        .skillTree .branch>div:nth-child(2){
+            flex-basis: 150px;
+            height: 10px;
+            background-color: white;
+        }
+
+        .skillTree .branch>div:nth-child(3){
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #346FB0;
+            left: 164px;
+            border-radius: 100%;
         }
 
         .skillTree>div:nth-child(2)>div:nth-child(1){
-            top: 250px;
-            left: 435px;
-            transform: rotate(90deg);
+            border-radius: 100%;
+            background-image: url("assets/images/mysql-logo.png");
+            background-size: cover;
+            background-position: center;
         }
 
+        .skillTree>div:nth-child(3)>div:nth-child(1){
+            border-radius: 100%;
+            background-image: url("assets/images/java_logo.jpg");
+            background-size: cover;
+            transform: rotate(-27deg);
+            background-position: center;
+        }
+
+        .skillTree>div:nth-child(4)>div:nth-child(1){
+            border-radius: 100%;
+            background-image: url("assets/images/hibernate logo.jpg");
+            background-size: cover;
+            transform: rotate(-62deg);
+            background-position: center;
+        }
+
+        .skillTree>div:nth-child(5)>div:nth-child(1){
+            border-radius: 100%;
+            background-image: url(assets/images/html.png);
+            background-color: white;
+            transform: rotate(-117deg);
+            background-size: contain;
+        }
+
+        .skillTree>div:nth-child(6)>div:nth-child(1){
+            border-radius: 100%;
+            background-image: url("assets/images/CSS-logo.png");
+            background-size: contain;
+            transform: rotate(-150deg);
+            background-position: center;
+        }
+
+        .skillTree>div:nth-child(7)>div:nth-child(1){
+            border-radius: 100%;
+            background-image: url("assets/images/javaScript logo.png");
+            background-size: contain;
+            transform: rotate(-180deg);
+            background-position: center;
+        }
+
+        .skillTree>div:nth-child(2)>div:nth-child(3){
+            background-color: orchid;
+        }
+
+        .skillTree>div:nth-child(3)>div:nth-child(3){
+            background-color: darkorange;
+        }
+
+        .skillTree>div:nth-child(4)>div:nth-child(3){
+            background-color: grey;
+        }
+
+        .skillTree>div:nth-child(5)>div:nth-child(3){
+            background-color: orangered;
+        }
+
+        .skillTree>div:nth-child(6)>div:nth-child(3){
+            background-color: skyblue;
+        }
+
+        .skillTree>div:nth-child(7)>div:nth-child(3){
+            background-color: #f9ca24;
+        }
+
+        .skillTree>div:nth-child(2){
+            position: absolute;
+            left: 266px;
+            bottom: 184px;
+        }
+
+        .skillTree>div:nth-child(3){
+            position: absolute;
+            left: 289px;
+            top: 167px;
+            transform: rotate(27deg);
+        }
+
+        .skillTree>div:nth-child(4){
+            position: absolute;
+            left: 382px;
+            top: 69px;
+            transform: rotate(62deg);
+        }
+
+        .skillTree>div:nth-child(5){
+            position: absolute;
+            right: 382px;
+            top: 69px;
+            transform: rotate(117deg);
+        }
+
+        .skillTree>div:nth-child(6){
+            position: absolute;
+            right: 290px;
+            top: 167px;
+            transform: rotate(150deg);
+        }
+
+        .skillTree>div:nth-child(7){
+            position: absolute;
+            right: 266px;
+            bottom: 184px;
+            transform: rotate(180deg);
+        }
+
+
+        /*Texts*/
         .skillTree>div:nth-child(2)>p{
             /*border: 2px solid green;*/
             position: absolute;
-            top: 275px;
-            left: 423px;
+            color: orchid;
+            top: 46px;
+            left: 151px;
         }
 
         .skillTree>div:nth-child(3)>p{
             /*border: 2px solid green;*/
             position: absolute;
-            left: 442px;
-            top: 194px;
-            transform: rotate(26deg);
+            color: darkorange;
+            left: 156px;
+            top: 45px;
+            /* transform: rotate(26deg); */
         }
 
         .skillTree>div:nth-child(4)>p{
-            /*border: 2px solid green;*/
             position: absolute;
-            left: 507px;
-            top: 138px;
-            transform: rotate(59deg);
-        }
-
-        .skillTree>div:nth-child(4)>p{
-            /*border: 2px solid green;*/
-            position: absolute;
-            left: 507px;
-            top: 138px;
-            transform: rotate(59deg);
+            color: grey;
+            left: 141px;
+            top: 45px;
         }
 
         .skillTree>div:nth-child(5)>p{
-            /*border: 2px solid green;*/
             position: absolute;
-            right: 512px;
-            top: 133px;
-            transform: rotate(-59deg);
+            color: orangered;
+            left: 156px;
+            top: 45px;
+            transform: rotate(180deg);
         }
 
         .skillTree>div:nth-child(6)>p{
             /*border: 2px solid green;*/
             position: absolute;
-            right: 442px;
-            top: 194px;
-            transform: rotate(-26deg);
+            color: skyblue;
+            left: 161px;
+            top: 45px;
+            transform: rotate(180deg);
         }
 
         .skillTree>div:nth-child(7)>p{
             /*border: 2px solid green;*/
             position: absolute;
-            top: 275px;
-            right: 423px;
+            color: #f9ca24;
+            top: 45px;
+            left: 142px;
+            transform: rotate(180deg);
         }
-
-        .skillTree>div:nth-child(3)>div:nth-child(1){
-            top: 250px;
-            right: 435px;
-            transform: rotate(90deg);
-        }
-
-        .skillTree>div:nth-child(4)>div:nth-child(1){
-            right: 450px;
-            top: 170px;
-            transform: rotate(-112deg);
-        }
-
-        .skillTree>div:nth-child(5)>div:nth-child(1){
-            left: 450px;
-            top: 170px;
-            transform: rotate(112deg);
-        }
-
-
-        .skillTree>div:nth-child(6)>div:nth-child(1){
-            left: 514px;
-            top: 94px;
-            transform: rotate(149deg);
-        }
-        .skillTree>div:nth-child(7)>div:nth-child(1){
-            right: 514px;
-            top: 94px;
-            transform: rotate(-149deg);
-        }
-
-
-        /*.skillTree>div:nth-child(2){
-            !*background-color: white;*!
-            border-radius: 30px 30px 0 0;
-            !*width: 10px;
-            height: 150px;
-            position: absolute;*!
-            left: 322px;
-            right: 0;
-            top: 250px;
-            margin: auto;
-            transform: rotate(90deg);
-        }
-
-        .skillTree>div:nth-child(3){
-            background-color: white;
-            border-radius: 0 0 30px 30px;
-            width: 10px;
-            height: 150px;
-            position: absolute;
-            right: 322px;
-            left: 0;
-            top: 250px;
-            margin: auto;
-            transform: rotate(90deg);
-        }
-
-        .skillTree>div:nth-child(4){
-            background-color: white;
-            border-radius: 0 0 30px 30px;
-            width: 10px;
-            height: 150px;
-            position: absolute;
-            right: 292px;
-            left: 0;
-            top: 171px;
-            margin: auto;
-            transform: rotate(110deg);
-        }
-
-        .skillTree>div:nth-child(5){
-            background-color: white;
-            border-radius: 0 0 30px 30px;
-            width: 10px;
-            height: 150px;
-            position: absolute;
-            left: 292px;
-            right: 0;
-            top: 171px;
-            margin: auto;
-            transform: rotate(-110deg);
-        }
-
-        .skillTree>div:nth-child(6){
-            background-color: white;
-            border-radius: 0 0 30px 30px;
-            width: 10px;
-            height: 150px;
-            position: absolute;
-            left: 150px;
-            right: 0;
-            top: 89px;
-            margin: auto;
-            transform: rotate(-149deg);
-        }
-
-        .skillTree>div:nth-child(7){
-            background-color: white;
-            border-radius: 0 0 30px 30px;
-            width: 10px;
-            height: 150px;
-            position: absolute;
-            right: 150px;
-            left: 0;
-            top: 89px;
-            margin: auto;
-            transform: rotate(149deg);
-        }
-
-
-        .skillTree>div:nth-child(14){
-            border: 2px solid red;
-            border-radius: 100%;
-            width: 100px;
-            height: 100px;
-            background-image: url("assets/images/mysql-logo.png");
-            background-size: cover;
-            background-position: center;
-            position: absolute;
-        }
-
-        .skillTree>div:nth-child(15){
-            border: 2px solid red;
-            border-radius: 100%;
-            width: 100px;
-            height: 100px;
-            background-image: url("assets/images/java_logo.jpg");
-            background-size: cover;
-            background-position: center;
-            position: absolute;
-        }
-
-
-        .skillTree>div:nth-child(16){
-            border: 2px solid red;
-            border-radius: 100%;
-            width: 100px;
-            height: 100px;
-            background-image: url("assets/images/hibernate logo.jpg");
-            background-size: cover;
-            background-position: center;
-            position: absolute;
-        }
-
-        .skillTree>div:nth-child(17){
-            border: 2px solid red;
-            border-radius: 100%;
-            width: 100px;
-            height: 100px;
-            background-image: url("assets/images/html.png");
-            background-color: white;
-            background-size: contain;
-            background-position: center;
-            position: absolute;
-        }
-
-        .skillTree>div:nth-child(18){
-            border: 2px solid red;
-            border-radius: 100%;
-            width: 100px;
-            height: 100px;
-            background-image: url("assets/images/CSS-logo.png");
-            background-size: contain;
-            background-position: center;
-            position: absolute;
-        }
-
-        .skillTree>div:nth-child(19){
-            border: 2px solid red;
-            border-radius: 100%;
-            width: 100px;
-            height: 100px;
-            background-image: url("assets/images/javaScript logo.png");
-            background-size: contain;
-            background-position: center;
-            position: absolute;
-        }
-
-        .skillTree>div:nth-child(20){
-            border: 2px solid red;
-            border-radius: 100%;
-            width: 100px;
-            height: 100px;
-            background-image: url("assets/images/javaScript logo.png");
-            background-size: cover;
-            background-position: center;
-            position: absolute;
-        }*/
+            /*branches ends*/
         /*Skills Ends*/
 
         /*MyProjects Starts*/
@@ -1124,47 +1074,48 @@
             <div></div>
 
             <!--circle image sets-->
-            <div>
+            <div class="branch">
                 <div></div>
                 <div></div>
                 <div></div>
                 <p>MySQL</p>
             </div>
 
-            <div>
+            <div class="branch">
                 <div></div>
                 <div></div>
                 <div></div>
                 <p>Java</p>
             </div>
 
-            <div>
+            <div class="branch">
                 <div></div>
                 <div></div>
                 <div></div>
                 <p>Hibernate</p>
             </div>
 
-            <div>
+            <div class="branch">
                 <div></div>
                 <div></div>
                 <div></div>
                 <p>HTML</p>
             </div>
 
-            <div>
+            <div class="branch">
                 <div></div>
                 <div></div>
                 <div></div>
                 <p>CSS</p>
             </div>
 
-            <div>
+            <div class="branch">
                 <div></div>
                 <div></div>
                 <div></div>
                 <p>JavaScript</p>
             </div>
+            <p><a href="#mProj">View my projects</a></p>
         </section>
     </section>
     <section id="mProj">
