@@ -722,6 +722,14 @@
         .skillTree .branch>div:nth-child(1){
             border-radius: 100%;
             height: 100px;
+            transition: all;
+            transition-duration: 1s;
+        }
+
+        .skillTree .branch>div:nth-child(1):hover{
+            transform: rotateY(60deg);
+            transition: all;
+            transition-duration: 1s;
         }
 
         .skillTree .branch>div:nth-child(2){
@@ -918,6 +926,37 @@
             font-family: 'Ubuntu', sans-serif;
             margin-bottom: 5px;
         }
+
+        #mProj>section{
+            border: 2px solid blue;
+            position: absolute;
+            top: 160px;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #mProj>section>section{
+            border: 2px solid green;
+            position: relative;
+            margin: 25px;
+            flex-basis: 250px;
+            height: 400px;
+            transition: all;
+            transition-duration: 0.5s;
+           /* flex-grow: 1;*/
+        }
+
+        #mProj>section>section:hover{
+            transform: scale(1.1);
+            transition: all;
+            transition-duration: 1s;
+        }
         /*MyProjects Ends*/
 
         /*Activities Starts*/
@@ -937,10 +976,12 @@
             border: 2px solid red;
             height: 400px;
             width: 400px;
+            display: flex;
+            align-items: center;
         }
 
         #activ .hexagon>div:hover{
-            transform: scale(1.1);
+            opacity: 70%;
             transition: all;
             transition-duration: 0.3s;
         }
@@ -1018,6 +1059,27 @@
             border-right:90px solid transparent;
             border-left: 90px solid transparent;
         }
+
+        /*#activ .hexagon>div:nth-child(1)::after {
+            content: "A";
+            opacity: 0;
+            position: absolute;
+            background: #a148a1;
+        }
+
+        #activ .hexagon>div:nth-child(1):hover::after {
+            content: "A";
+            opacity: 100%;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            left: 300px;
+            background-image: url("assets/images/myPicSmall.png");
+            background-size: cover;
+            transition: all;
+            transition-duration: 1s;
+        }*/
 
         /**#activ .hexagon>div:nth-child(1)::after{
             content: "A";
@@ -1257,21 +1319,55 @@
     </section>
     <section id="mProj">
         <h3>My Projects</h3>
+        <section>
+            <section>
+                <figure>
+                    <figcaption></figcaption>
+                </figure>
+                <figure>
+                    <figcaption></figcaption>
+                </figure>
+                <figure>
+                    <figcaption></figcaption>
+                </figure>
+                <figure>
+                    <figcaption></figcaption>
+                </figure>
+            </section>
+            <section>
+                <figure>
+                    <figcaption></figcaption>
+                </figure>
+            </section>
+            <section>
+                <figure>
+                    <figcaption></figcaption>
+                </figure>
+            </section>
+            <section>
+                <figure>
+                    <figcaption></figcaption>
+                </figure>
+            </section>
+        </section>
         <!--image icon-->
-       <div>
-            <figure>
-                <figcaption></figcaption>
-                <!--image of project-->
-                <figcaption></figcaption>
-            </figure>
-       </div>
+        <!--<section>
+            <div>
+                <figure>
+                    <figcaption></figcaption>
+                    &lt;!&ndash;image of project&ndash;&gt;
+                    &lt;!&ndash;<figcaption></figcaption>&ndash;&gt;
+                </figure>
+            </div>
+        </section>-->
+
         <!--image icon-->
     </section>
     <section id="activ">
         <h1>Activities</h1>
         <section class="hexagon">
             <div>
-                <div></div>
+                <!--<div></div>-->
             </div>
             <div></div>
             <div></div>
