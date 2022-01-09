@@ -5,27 +5,30 @@
     <title>MyProfile</title>
     <link href="assets/icons/favIcon.png" rel="icon">
     <meta content="width=device-width initial-scale=1" name="viewport">
-    <link rel="stylesheet" href="assets/css/fonts/css/all.css">
+    <link href="assets/css/fonts/css/all.css" rel="stylesheet">
     <!--<link rel="stylesheet" href="assets/css/styles.css">-->
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Signika+Negative:wght@600&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Lobster&family=Monda:wght@700&family=Signika+Negative:wght@600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Bowlby+One+SC&family=Lobster&family=Monda:wght@700&family=Signika+Negative:wght@600&display=swap" rel="stylesheet">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Signika+Negative:wght@600&family=Ubuntu:wght@500;700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Lobster&family=Monda:wght@700&family=Signika+Negative:wght@600&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Bowlby+One+SC&family=Lobster&family=Monda:wght@700&family=Signika+Negative:wght@600&display=swap"
+          rel="stylesheet">
 
     <style>
-        .main{
+        .main {
             background-color: #1d1212;
             color: white;
         }
 
         /*Header start*/
-        body>header{
+        body > header {
             background: #e46d2a;
             position: fixed;
             height: 60px;
@@ -38,7 +41,7 @@
             z-index: 3;
         }
 
-        body>header>nav{
+        body > header > nav {
             border: 2px solid blue;
             position: absolute;
             top: 0;
@@ -48,7 +51,7 @@
             margin: auto;
         }
 
-        .navigationBar{
+        .navigationBar {
             border: 2px solid red;
             list-style: none;
             position: absolute;
@@ -63,12 +66,12 @@
         }
 
 
-        header + main{
+        header + main {
             padding-top: 60px;
         }
 
 
-        body>header>nav>ul>li{
+        body > header > nav > ul > li {
             /*border: 2px solid white;*/
             height: 39px;
             display: inline-block;
@@ -82,25 +85,26 @@
             color: black;
         }*/
 
-        body>header>nav>ul>li>a:hover{
+        body > header > nav > ul > li > a:hover {
             cursor: pointer;
             color: black;
         }
 
-        body>header>nav>ul>li>a{
+        body > header > nav > ul > li > a {
             text-decoration: none;
             color: white;
             margin-left: 4px;
         }
+
         /*Header End*/
 
 
         /*Main starts*/
-        main{
+        main {
             /*border: 2px solid blue;*/
         }
 
-        main>section{
+        main > section {
             /*border: 2px solid red;*/
             padding-top: 50px;
             /*margin-top: 60px;*/
@@ -110,12 +114,12 @@
         }
 
 
-        #home{
+        #home {
             position: relative;
             height: 649px;
         }
 
-        #home>section:nth-child(1){
+        #home > section:nth-child(1) {
             /*border: 2px solid green;*/
             position: absolute;
             top: 0;
@@ -125,7 +129,7 @@
             display: flex;
         }
 
-        #home>section:nth-child(1):hover .overlay{
+        #home > section:nth-child(1):hover .overlay {
             background: #E88A55;
             position: absolute;
             top: 0;
@@ -138,7 +142,7 @@
             transition-duration: 0.8s;
         }
 
-        #home>section:nth-child(1)>div:nth-child(1){
+        #home > section:nth-child(1) > div:nth-child(1) {
             /*border: 2px solid blue;*/
             position: absolute;
             top: 0;
@@ -153,7 +157,7 @@
         }
 
 
-        #home>section:nth-child(1)>div:nth-child(2){
+        #home > section:nth-child(1) > div:nth-child(2) {
             /*border: 2px solid blue;*/
             position: absolute;
             background-image: url("assets/images/myPic.jpeg");
@@ -168,7 +172,7 @@
         }
 
 
-        #home>section:nth-child(2){
+        #home > section:nth-child(2) {
             /*border: 2px solid red;*/
             /*height: 689px;
             width: 1271px;
@@ -188,7 +192,7 @@
         }
 
 
-        #home>section>div>h1{
+        #home > section > div > h1 {
             z-index: 2;
             width: max-content;
             position: relative;
@@ -197,18 +201,18 @@
             font-family: 'Monda', sans-serif;
         }
 
-        #home>section>div>h1:nth-child(1){
+        #home > section > div > h1:nth-child(1) {
             /*margin-top: 200px;*/
             top: 279px;
             color: #1d1212;
         }
 
-        #home>section>div>h1:nth-child(2){
+        #home > section > div > h1:nth-child(2) {
             top: 222px;
             color: white;
         }
 
-        #home>section:nth-child(2)>div{
+        #home > section:nth-child(2) > div {
             border: 2px solid pink;
             background-image: url("assets/images/coverImg.png");
             background-size: cover;
@@ -220,7 +224,7 @@
             margin: auto;
         }
 
-        #home>section:nth-child(2)>div>div{
+        #home > section:nth-child(2) > div > div {
             background-color: #e46d2a;
             border-radius: 10px;
             width: 200px;
@@ -235,7 +239,7 @@
             cursor: pointer;
         }
 
-        .overlay>div:nth-child(1){
+        .overlay > div:nth-child(1) {
             /*border: 2px solid white;*/
             background: white;
             border-radius: 20px;
@@ -249,7 +253,7 @@
             margin: auto;
         }
 
-        .overlay>div:nth-child(2){
+        .overlay > div:nth-child(2) {
             background-image: url("assets/images/myPicSmall.png");
             border-radius: 100%;
             background-size: cover;
@@ -261,7 +265,7 @@
             margin: auto;
         }
 
-        #home>div{
+        #home > div {
             border: 2px solid red;
             height: 295px;
             position: absolute;
@@ -270,7 +274,7 @@
             width: 1116px;
         }
 
-        #home>div>div{
+        #home > div > div {
             /*border: 2px solid red;*/
             height: 20px;
             width: 20px;
@@ -279,140 +283,141 @@
         }
 
         /*Last row*/
-        #home>div>div:nth-child(1){
+        #home > div > div:nth-child(1) {
             background-color: steelblue;
             bottom: 60px;
-            right:200px;
+            right: 200px;
         }
 
-        #home>div>div:nth-child(2){
+        #home > div > div:nth-child(2) {
             background-color: grey;
             bottom: 60px;
             right: 400px;
         }
 
-        #home>div>div:nth-child(3){
+        #home > div > div:nth-child(3) {
             background-color: #e0a49a;
             bottom: 60px;
             right: 800px;
         }
-        #home>div>div:nth-child(4){
+
+        #home > div > div:nth-child(4) {
             background-color: cadetblue;
             bottom: 60px;
             left: 20px;
         }
 
         /****Mid row****/
-        #home>div>div:nth-child(5){
+        #home > div > div:nth-child(5) {
             background-color: red;
             top: 130px;
             left: 60px;
         }
 
-        #home>div>div:nth-child(6){
+        #home > div > div:nth-child(6) {
             background-color: lightgreen;
             top: 130px;
             left: 400px;
         }
 
-        #home>div>div:nth-child(7){
+        #home > div > div:nth-child(7) {
             background-color: orchid;
             top: 130px;
             left: 800px;
         }
 
-        #home>div>div:nth-child(8){
+        #home > div > div:nth-child(8) {
             background-color: orange;
             top: 130px;
             right: 60px;
         }
 
         /***1st row***/
-        #home>div>div:nth-child(9){
+        #home > div > div:nth-child(9) {
             background-color: #0c96c4;
             top: 60px;
             left: 20px;
         }
 
-        #home>div>div:nth-child(10){
+        #home > div > div:nth-child(10) {
             background-color: #a148a1;
             top: 60px;
             right: 400px;
         }
 
-        #home>div>div:nth-child(11){
+        #home > div > div:nth-child(11) {
             background-color: green;
             top: 60px;
             right: 800px;
         }
 
-        #home>div>div:nth-child(12){
+        #home > div > div:nth-child(12) {
             background-color: hotpink;
             top: 60px;
             right: 20px;
         }
 
-        #home>div>div:nth-child(13){
+        #home > div > div:nth-child(13) {
             background-color: blueviolet;
             bottom: 35px;
             left: 160px;
         }
 
-        #home>div>div:nth-child(14){
+        #home > div > div:nth-child(14) {
             background-color: lightskyblue;
             bottom: 35px;
             right: 580px;
         }
 
-        #home>div>div:nth-child(15){
+        #home > div > div:nth-child(15) {
             background-color: orangered;
             bottom: 120px;
             right: 500px;
         }
 
-        #home>div>div:nth-child(16){
+        #home > div > div:nth-child(16) {
             background-color: #917a7a;
             bottom: 35px;
             right: 20px;
         }
 
-        #home>div>div:nth-child(17){
+        #home > div > div:nth-child(17) {
             background-color: plum;
             top: 35px;
             right: 200px;
         }
 
         /*About starts*/
-        #about{
+        #about {
             /*border: 2px solid red;*/
             font-family: 'Barlow', sans-serif;
             padding: 22px;
             height: 600px;
         }
 
-        #about>h1{
+        #about > h1 {
             font-size: 70px;
             font-family: 'Ubuntu', sans-serif;
             margin-bottom: 5px;
         }
 
-        #about>div{
+        #about > div {
             position: absolute;
             top: 190px;
             margin-left: 20px;
-            background: linear-gradient(to top,red,orange);
+            background: linear-gradient(to top, red, orange);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-family: 'Ubuntu', sans-serif;
         }
 
-        #about>p{
+        #about > p {
             position: absolute;
             top: 140px;
             margin-left: 20px;
         }
 
-        #about>article{
+        #about > article {
             border: 2px solid darkgray;
             border-radius: 40px;
             position: absolute;
@@ -422,54 +427,55 @@
             padding: 10px;
         }
 
-        #about>article>div{
+        #about > article > div {
             width: 200px;
         }
 
-        #about>article>h4{
-            background: linear-gradient(to bottom,deepskyblue,lightsteelblue);
+        #about > article > h4 {
+            background: linear-gradient(to bottom, deepskyblue, lightsteelblue);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 18px;
             font-family: 'Ubuntu', sans-serif;
         }
 
-        #about>article:nth-child(4){
+        #about > article:nth-child(4) {
             left: 0;
             top: 240px;
         }
 
-        #about>article:nth-child(5){
+        #about > article:nth-child(5) {
             left: 0;
             bottom: 0;
         }
 
-        #about>article:nth-child(6){
+        #about > article:nth-child(6) {
             right: 0;
             top: 240px;
         }
 
-        #about>article:nth-child(7){
+        #about > article:nth-child(7) {
             right: 0;
             bottom: 0;
         }
+
         /*About Ends*/
 
         /*Education Starts*/
-        #edu{
+        #edu {
             /*border: 2px solid red;*/
             font-family: 'Barlow', sans-serif;
             padding: 22px;
             height: 700px;
         }
 
-        #edu>h1{
+        #edu > h1 {
             font-size: 70px;
             font-family: 'Ubuntu', sans-serif;
             margin-bottom: 5px;
         }
 
-        .eduTree>div:nth-child(1){
+        .eduTree > div:nth-child(1) {
             /*border: 2px solid red;*/
             border-radius: 100%;
             background-image: url("assets/images/cap.png");
@@ -482,7 +488,7 @@
             margin: auto;
         }
 
-        .eduTree>div:nth-child(2){
+        .eduTree > div:nth-child(2) {
             /*border: 2px solid red;*/
             background-color: white;
             position: absolute;
@@ -490,12 +496,12 @@
             border-radius: 0 0 30px 30px;
             width: 10px;
             top: 273px;
-            left:  0;
+            left: 0;
             right: 0;
             margin: auto;
         }
 
-        .eduTree>div:nth-child(3){
+        .eduTree > div:nth-child(3) {
             background-color: white;
             position: absolute;
             height: 150px;
@@ -503,12 +509,12 @@
             width: 10px;
             top: 349px;
             transform: rotate(90deg);
-            left:  0;
+            left: 0;
             right: 160px;
             margin: auto;
         }
 
-        .eduTree>div:nth-child(4){
+        .eduTree > div:nth-child(4) {
             background-color: white;
             position: absolute;
             height: 150px;
@@ -516,12 +522,12 @@
             width: 10px;
             top: 527px;
             transform: rotate(90deg);
-            left:  0;
+            left: 0;
             right: 160px;
             margin: auto;
         }
 
-        .eduTree>div:nth-child(5){
+        .eduTree > div:nth-child(5) {
             background-color: white;
             position: absolute;
             height: 150px;
@@ -529,12 +535,12 @@
             width: 10px;
             top: 257px;
             transform: rotate(90deg);
-            left:  160px;
+            left: 160px;
             right: 0;
             margin: auto;
         }
 
-        .eduTree>div:nth-child(6){
+        .eduTree > div:nth-child(6) {
             background-color: white;
             position: absolute;
             height: 150px;
@@ -542,12 +548,12 @@
             width: 10px;
             top: 446px;
             transform: rotate(90deg);
-            left:  160px;
+            left: 160px;
             right: 0;
             margin: auto;
         }
 
-        .eduTree>div:nth-child(7){
+        .eduTree > div:nth-child(7) {
             background-color: red;
             position: absolute;
             height: 20px;
@@ -560,7 +566,7 @@
         }
 
 
-        .eduTree>div:nth-child(8){
+        .eduTree > div:nth-child(8) {
             background-color: #346FB0;
             position: absolute;
             height: 20px;
@@ -572,7 +578,7 @@
             margin: auto;
         }
 
-        .eduTree>div:nth-child(9){
+        .eduTree > div:nth-child(9) {
             background-color: lightgreen;
             position: absolute;
             height: 20px;
@@ -584,7 +590,7 @@
             margin: auto;
         }
 
-        .eduTree>div:nth-child(10){
+        .eduTree > div:nth-child(10) {
             background-color: plum;
             position: absolute;
             height: 20px;
@@ -596,7 +602,7 @@
             margin: auto;
         }
 
-        #edu>article{
+        #edu > article {
             border: 3px solid whitesmoke;
             width: 500px;
             height: 100px;
@@ -605,64 +611,64 @@
             margin: 23px;
         }
 
-        #edu>article:nth-child(3){
+        #edu > article:nth-child(3) {
             position: absolute;
             right: 23px;
             top: 242px;
         }
 
 
-        #edu>article:nth-child(4){
+        #edu > article:nth-child(4) {
             position: absolute;
             left: 23px;
             top: 338px;
         }
 
-        #edu>article:nth-child(5){
+        #edu > article:nth-child(5) {
             position: absolute;
             right: 23px;
             top: 429px;
         }
 
-        #edu>article:nth-child(6){
+        #edu > article:nth-child(6) {
             position: absolute;
             left: 23px;
             top: 509px;
         }
 
-        #edu>article:nth-child(3)>h4{
+        #edu > article:nth-child(3) > h4 {
             color: red;
         }
 
-        #edu>article:nth-child(4)>h4{
+        #edu > article:nth-child(4) > h4 {
             color: #346FB0;
         }
 
-        #edu>article:nth-child(5)>h4{
+        #edu > article:nth-child(5) > h4 {
             color: lightgreen;
         }
 
-        #edu>article:nth-child(6)>h4{
+        #edu > article:nth-child(6) > h4 {
             color: plum;
         }
 
         /*Education Ends*/
 
         /*Skills Starts*/
-        #Skills{
+        #Skills {
             border: 2px solid red;
             font-family: 'Barlow', sans-serif;
             padding: 22px;
             height: 700px;
         }
 
-        #Skills>h1{
+        #Skills > h1 {
             font-size: 70px;
             font-family: 'Ubuntu', sans-serif;
             margin-bottom: 5px;
         }
 
-        #Skills>section:nth-child(2){
+        #Skills > section:nth-child(2) {
             border: 4px solid plum;
             width: 200px;
             padding: 10px;
@@ -673,17 +679,18 @@
             border-radius: 30px;
         }
 
-        #Skills>section:nth-child(3){
+
+        #Skills > section:nth-child(3) {
             /*border: 2px solid red;*/
             position: absolute;
-            width:1200px;
+            width: 1200px;
             height: 560px;
             right: 20px;
             top: 110px;
         }
 
         /*center image*/
-        .skillTree>div:nth-child(1){
+        .skillTree > div:nth-child(1) {
             border: 2px solid lightgoldenrodyellow;
             border-radius: 46%;
             background-image: url("assets/images/shield.jpg");
@@ -699,14 +706,22 @@
             margin: auto;
         }
 
-        .skillTree>p{
+        .skillTree>p >a{
             position: absolute;
-            right: 200px;
             bottom: 50px;
+            right: 316px;
+            width: 150px;
+            color: white;
+            background: grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 47px;
+            border-radius: 15px;
         }
 
         /*branches starts*/
-        .skillTree .branch{
+        .skillTree .branch {
             /*border: 2px solid red;*/
             height: 100px;
             width: 250px;
@@ -714,31 +729,31 @@
             align-items: center;
         }
 
-        .skillTree .branch>div{
+        .skillTree .branch > div {
             /*border: 2px solid green;*/
             flex-basis: 100px;
         }
 
-        .skillTree .branch>div:nth-child(1){
+        .skillTree .branch > div:nth-child(1) {
             border-radius: 100%;
             height: 100px;
             transition: all;
             transition-duration: 1s;
         }
 
-        .skillTree .branch>div:nth-child(1):hover{
+        .skillTree .branch > div:nth-child(1):hover {
             transform: rotateY(60deg);
             transition: all;
             transition-duration: 1s;
         }
 
-        .skillTree .branch>div:nth-child(2){
+        .skillTree .branch > div:nth-child(2) {
             flex-basis: 150px;
             height: 10px;
             background-color: white;
         }
 
-        .skillTree .branch>div:nth-child(3){
+        .skillTree .branch > div:nth-child(3) {
             position: absolute;
             width: 20px;
             height: 20px;
@@ -747,14 +762,14 @@
             border-radius: 100%;
         }
 
-        .skillTree>div:nth-child(2)>div:nth-child(1){
+        .skillTree > div:nth-child(2) > div:nth-child(1) {
             border-radius: 100%;
             background-image: url("assets/images/mysql-logo.png");
             background-size: cover;
             background-position: center;
         }
 
-        .skillTree>div:nth-child(3)>div:nth-child(1){
+        .skillTree > div:nth-child(3) > div:nth-child(1) {
             border-radius: 100%;
             background-image: url("assets/images/java_logo.jpg");
             background-size: cover;
@@ -762,7 +777,7 @@
             background-position: center;
         }
 
-        .skillTree>div:nth-child(4)>div:nth-child(1){
+        .skillTree > div:nth-child(4) > div:nth-child(1) {
             border-radius: 100%;
             background-image: url("assets/images/hibernate logo.jpg");
             background-size: cover;
@@ -770,7 +785,7 @@
             background-position: center;
         }
 
-        .skillTree>div:nth-child(5)>div:nth-child(1){
+        .skillTree > div:nth-child(5) > div:nth-child(1) {
             border-radius: 100%;
             background-image: url(assets/images/html.png);
             background-color: white;
@@ -778,7 +793,7 @@
             background-size: contain;
         }
 
-        .skillTree>div:nth-child(6)>div:nth-child(1){
+        .skillTree > div:nth-child(6) > div:nth-child(1) {
             border-radius: 100%;
             background-image: url("assets/images/CSS-logo.png");
             background-size: contain;
@@ -786,7 +801,7 @@
             background-position: center;
         }
 
-        .skillTree>div:nth-child(7)>div:nth-child(1){
+        .skillTree > div:nth-child(7) > div:nth-child(1) {
             border-radius: 100%;
             background-image: url("assets/images/javaScript logo.png");
             background-size: contain;
@@ -794,65 +809,65 @@
             background-position: center;
         }
 
-        .skillTree>div:nth-child(2)>div:nth-child(3){
+        .skillTree > div:nth-child(2) > div:nth-child(3) {
             background-color: orchid;
         }
 
-        .skillTree>div:nth-child(3)>div:nth-child(3){
+        .skillTree > div:nth-child(3) > div:nth-child(3) {
             background-color: darkorange;
         }
 
-        .skillTree>div:nth-child(4)>div:nth-child(3){
+        .skillTree > div:nth-child(4) > div:nth-child(3) {
             background-color: grey;
         }
 
-        .skillTree>div:nth-child(5)>div:nth-child(3){
+        .skillTree > div:nth-child(5) > div:nth-child(3) {
             background-color: orangered;
         }
 
-        .skillTree>div:nth-child(6)>div:nth-child(3){
+        .skillTree > div:nth-child(6) > div:nth-child(3) {
             background-color: skyblue;
         }
 
-        .skillTree>div:nth-child(7)>div:nth-child(3){
+        .skillTree > div:nth-child(7) > div:nth-child(3) {
             background-color: #f9ca24;
         }
 
-        .skillTree>div:nth-child(2){
+        .skillTree > div:nth-child(2) {
             position: absolute;
             left: 266px;
             bottom: 184px;
         }
 
-        .skillTree>div:nth-child(3){
+        .skillTree > div:nth-child(3) {
             position: absolute;
             left: 289px;
             top: 167px;
             transform: rotate(27deg);
         }
 
-        .skillTree>div:nth-child(4){
+        .skillTree > div:nth-child(4) {
             position: absolute;
             left: 382px;
             top: 69px;
             transform: rotate(62deg);
         }
 
-        .skillTree>div:nth-child(5){
+        .skillTree > div:nth-child(5) {
             position: absolute;
             right: 382px;
             top: 69px;
             transform: rotate(117deg);
         }
 
-        .skillTree>div:nth-child(6){
+        .skillTree > div:nth-child(6) {
             position: absolute;
             right: 290px;
             top: 167px;
             transform: rotate(150deg);
         }
 
-        .skillTree>div:nth-child(7){
+        .skillTree > div:nth-child(7) {
             position: absolute;
             right: 266px;
             bottom: 184px;
@@ -861,7 +876,7 @@
 
 
         /*Texts*/
-        .skillTree>div:nth-child(2)>p{
+        .skillTree > div:nth-child(2) > p {
             /*border: 2px solid green;*/
             position: absolute;
             color: orchid;
@@ -869,7 +884,7 @@
             left: 151px;
         }
 
-        .skillTree>div:nth-child(3)>p{
+        .skillTree > div:nth-child(3) > p {
             /*border: 2px solid green;*/
             position: absolute;
             color: darkorange;
@@ -878,14 +893,14 @@
             /* transform: rotate(26deg); */
         }
 
-        .skillTree>div:nth-child(4)>p{
+        .skillTree > div:nth-child(4) > p {
             position: absolute;
             color: grey;
             left: 141px;
             top: 45px;
         }
 
-        .skillTree>div:nth-child(5)>p{
+        .skillTree > div:nth-child(5) > p {
             position: absolute;
             color: orangered;
             left: 156px;
@@ -893,7 +908,7 @@
             transform: rotate(180deg);
         }
 
-        .skillTree>div:nth-child(6)>p{
+        .skillTree > div:nth-child(6) > p {
             /*border: 2px solid green;*/
             position: absolute;
             color: skyblue;
@@ -902,7 +917,7 @@
             transform: rotate(180deg);
         }
 
-        .skillTree>div:nth-child(7)>p{
+        .skillTree > div:nth-child(7) > p {
             /*border: 2px solid green;*/
             position: absolute;
             color: #f9ca24;
@@ -910,25 +925,26 @@
             left: 142px;
             transform: rotate(180deg);
         }
+
         /*branches ends*/
         /*Skills Ends*/
 
         /*MyProjects Starts*/
-        #mProj{
+        #mProj {
             border: 2px solid red;
             font-family: 'Barlow', sans-serif;
             padding: 22px;
-            height: 700px;
+            height: 800px;
         }
 
-        #mProj>h3{
+        #mProj > h3 {
             font-size: 50px;
             font-family: 'Ubuntu', sans-serif;
             margin-bottom: 5px;
         }
 
-        #mProj>section{
-            border: 2px solid blue;
+        #mProj > section {
+            /*border: 2px solid blue;*/
             position: absolute;
             top: 160px;
             bottom: 20px;
@@ -941,15 +957,18 @@
             flex-wrap: wrap;
         }
 
-        #mProj>section>section{
-            border: 2px solid green;
+        #mProj > section > section {
+            /*border: 2px solid green;*/
             position: relative;
             margin: 25px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
             flex-basis: 250px;
-            height: 400px;
+            height: 500px;
             transition: all;
             transition-duration: 0.5s;
-           /* flex-grow: 1;*/
+            /* flex-grow: 1;*/
         }
 
         #mProj>section>section:hover{
@@ -957,22 +976,145 @@
             transition: all;
             transition-duration: 1s;
         }
+
+        a{
+            text-decoration: none;
+        }
+
+        #mProj>section>section>a:hover{
+            text-decoration: none;
+        }
+        #mProj>section>section figure:hover{
+            flex-basis: 105px;
+            flex-grow: 2;
+        }
+
+        #mProj > section > section figure {
+            /*border: 2px solid red;*/
+            position: relative;
+            /*background-image: url("assets/images/l_c1.png");
+            background-size: cover;*/
+            margin: 9px;
+            height: 100px;
+            flex-grow: 1;
+        }
+
+
+        #mProj > section > section figure figcaption{
+            /*border: 2px solid skyblue;*/
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+        }
+
+        .layouts figure:nth-child(1){
+            background-image: url("assets/images/l_c1.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .layouts>figure:nth-child(2){
+            background-image: url("assets/images/l_c2.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .layouts>figure:nth-child(3){
+            background-image: url("assets/images/l_c3.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .layouts>figure:nth-child(4){
+            background-image: url("assets/images/l_c4.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .animations>figure:nth-child(1){
+            background-image: url("assets/images/a_c1.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .animations>figure:nth-child(2){
+            background-image: url("assets/images/a_c2.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .animations>figure:nth-child(3){
+            background-image: url("assets/images/a_c3.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .animations>figure:nth-child(4){
+            background-image: url("assets/images/a_c4.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .transitions>figure:nth-child(1){
+            background-image: url("assets/images/t_c1.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .transitions>figure:nth-child(2){
+            background-image: url("assets/images/t_c2.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .responsive>figure{
+            background-image: url("assets/images/res.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .layouts{
+            background-color: red;
+            border-radius: 10px;
+        }
+
+        .animations{
+            background-color: #ff9f43;
+            border-radius: 10px;
+        }
+
+        .transitions{
+            background-color: #8e44ad;
+            border-radius: 10px;
+        }
+
+        .responsive{
+            background-color: #079992;
+            border-radius: 10px;
+        }
         /*MyProjects Ends*/
 
         /*Activities Starts*/
-        #activ{
+        #activ {
             border: 2px solid red;
             font-family: 'Barlow', sans-serif;
             padding: 22px;
         }
 
-        #activ>h1{
+        #activ > h1 {
             font-size: 70px;
             font-family: 'Ubuntu', sans-serif;
             margin-bottom: 5px;
         }
 
-        #activ .hexagon{
+        #activ .hexagon {
             border: 2px solid red;
             height: 400px;
             width: 400px;
@@ -980,13 +1122,13 @@
             align-items: center;
         }
 
-        #activ .hexagon>div:hover{
+        #activ .hexagon > div:hover {
             opacity: 70%;
             transition: all;
             transition-duration: 0.3s;
         }
 
-        #activ .hexagon>div:nth-child(1){
+        #activ .hexagon > div:nth-child(1) {
             /*border: 50px solid green;*/
             /*background-color: red;*/
             /*border-top: 100px solid #346FB0;*/
@@ -996,11 +1138,11 @@
             top: 211px;
             left: 129px;
             border-top: 150px solid red;
-            border-right:90px solid transparent;
+            border-right: 90px solid transparent;
             border-left: 90px solid transparent;
         }
 
-        #activ .hexagon>div:nth-child(2){
+        #activ .hexagon > div:nth-child(2) {
             width: 0;
             height: 0;
             position: absolute;
@@ -1008,11 +1150,11 @@
             left: 229px;
             /*border-top: 100px solid #346FB0;*/
             border-bottom: 150px solid #8e44ad;
-            border-right:90px solid transparent;
+            border-right: 90px solid transparent;
             border-left: 90px solid transparent;
         }
 
-        #activ .hexagon>div:nth-child(3){
+        #activ .hexagon > div:nth-child(3) {
             width: 0;
             height: 0;
             position: absolute;
@@ -1020,11 +1162,11 @@
             left: 29px;
             /*border-top: 100px solid #346FB0;*/
             border-bottom: 150px solid #e1b12c;
-            border-right:90px solid transparent;
+            border-right: 90px solid transparent;
             border-left: 90px solid transparent;
         }
 
-        #activ .hexagon>div:nth-child(4){
+        #activ .hexagon > div:nth-child(4) {
             width: 0;
             height: 0;
             position: absolute;
@@ -1032,11 +1174,11 @@
             left: 31px;
             /*border-top: 100px solid #346FB0;*/
             border-top: 150px solid #e67e22;
-            border-right:90px solid transparent;
+            border-right: 90px solid transparent;
             border-left: 90px solid transparent;
         }
 
-        #activ .hexagon>div:nth-child(5){
+        #activ .hexagon > div:nth-child(5) {
             width: 0;
             height: 0;
             position: absolute;
@@ -1044,11 +1186,11 @@
             left: 131px;
             /*border-top: 100px solid #346FB0;*/
             border-bottom: 150px solid #00cec9;
-            border-right:90px solid transparent;
+            border-right: 90px solid transparent;
             border-left: 90px solid transparent;
         }
 
-        #activ .hexagon>div:nth-child(6){
+        #activ .hexagon > div:nth-child(6) {
             width: 0;
             height: 0;
             position: absolute;
@@ -1056,7 +1198,7 @@
             left: 231px;
             /*border-top: 100px solid #346FB0;*/
             border-top: 150px solid #2ed573;
-            border-right:90px solid transparent;
+            border-right: 90px solid transparent;
             border-left: 90px solid transparent;
         }
 
@@ -1194,9 +1336,10 @@
         </div>
     </section>
 
-    <section id ="about">
-        <h1 >About</h1>
-        <p>I'm a<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias debitis dolorum excepturi harum illum
+    <section id="about">
+        <h1>About</h1>
+        <p>I'm a<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias debitis dolorum excepturi harum
+            illum
             iste, magni sint vero? </p>
         <div>
             <h2>What I do..,</h2>
@@ -1215,7 +1358,8 @@
         <!--box 3-->
         <article>
             <h4>Database Management</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias distinctio ex natus quas qui.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias distinctio ex natus quas
+                qui.</p>
         </article>
         <!--box 4-->
         <article>
@@ -1247,7 +1391,8 @@
         </article>
         <article>
             <h4>2018 - 2020</h4>
-            <p>Completed my school education in 2018 at Galle Siridhamma College ,<br> got ABB from GCE A/L Examination in 2020</p>
+            <p>Completed my school education in 2018 at Galle Siridhamma College ,<br> got ABB from GCE A/L Examination
+                in 2020</p>
         </article>
         <article>
             <h4>2015</h4>
@@ -1260,13 +1405,13 @@
     </section>
     <section id="Skills">
         <h1>Skills</h1>
-            <section>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eaque enim illum in incidunt iusto magnam
-                    nemo numquam quae ullam? Accusamus aut delectus minima nisi quae rerum. Dignissimos, iure labore.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi architecto asperiores consequatur,
-                    cumque dolorem doloremque esse eveniet illo itaque, labore libero modi numquam porro quas quod sunt
-                    tempora voluptate.</p>
-            </section>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eaque enim illum in incidunt iusto magnam
+                nemo numquam quae ullam? Accusamus aut delectus minima nisi quae rerum. Dignissimos, iure labore.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi architecto asperiores consequatur,
+                cumque dolorem doloremque esse eveniet illo itaque, labore libero modi numquam porro quas quod sunt
+                tempora voluptate.</p>
+        </section>
 
         <section class="skillTree">
             <!--center image-->
@@ -1320,47 +1465,77 @@
     <section id="mProj">
         <h3>My Projects</h3>
         <section>
-            <section>
+            <section class="layouts">
+                    <figure>
+                        <a href="myprojects/CSS/Layouts/01.Assignment/Case_01.html" target="_blank">
+                            <figcaption></figcaption>
+                        </a>
+                    </figure>
+
                 <figure>
-                    <figcaption></figcaption>
+                    <a href="myprojects/CSS/Layouts/02.Assignment/Case_02.html" target="_blank">
+                        <figcaption></figcaption>
+                    </a>
                 </figure>
+
                 <figure>
-                    <figcaption></figcaption>
+                    <a href="myprojects/CSS/Layouts/03.Assignment/Case_03.html" target="_blank">
+                        <figcaption></figcaption>
+                    </a>
                 </figure>
+
                 <figure>
-                    <figcaption></figcaption>
-                </figure>
-                <figure>
-                    <figcaption></figcaption>
+                    <a href="myprojects/CSS/Layouts/04.Assignment/Case_04.html" target="_blank">
+                        <figcaption></figcaption>
+                    </a>
                 </figure>
             </section>
-            <section>
+
+            <section class="animations">
                 <figure>
-                    <figcaption></figcaption>
+                    <a href="myprojects/CSS/Animations/08.Assignment/Case_01.html" target="_blank">
+                        <figcaption></figcaption>
+                    </a>
+
+                </figure>
+                <figure>
+                    <a href="myprojects/CSS/Animations/09.Assignment/Case_02.html" target="_blank">
+                        <figcaption></figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="myprojects/CSS/Animations/10.Assignment/Case_03.html" target="_blank">
+                        <figcaption>View</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="myprojects/CSS/Animations/11.Assignment/Case_04.html" target="_blank">
+                        <figcaption></figcaption>
+                    </a>
                 </figure>
             </section>
-            <section>
+
+            <section class="transitions">
                 <figure>
-                    <figcaption></figcaption>
+                    <a href="myprojects/CSS/Transitions/06.Assignment/case-01.html" target="_blank">
+                        <figcaption></figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="myprojects/CSS/Transitions/07.Assignment/case-02.html" target="_blank">
+                        <figcaption></figcaption>
+                    </a>
                 </figure>
             </section>
-            <section>
+
+            <section class="responsive">
                 <figure>
-                    <figcaption></figcaption>
+                    <a href="myprojects/CSS/Responsive/05.Assignment/index.html" target="_blank">
+                        <figcaption>View</figcaption>
+                    </a>
                 </figure>
             </section>
         </section>
-        <!--image icon-->
-        <!--<section>
-            <div>
-                <figure>
-                    <figcaption></figcaption>
-                    &lt;!&ndash;image of project&ndash;&gt;
-                    &lt;!&ndash;<figcaption></figcaption>&ndash;&gt;
-                </figure>
-            </div>
-        </section>-->
-
         <!--image icon-->
     </section>
     <section id="activ">
@@ -1388,13 +1563,13 @@
         <!--Form-->
         <fieldset>
             <label for="txtFName">First Name</label>
-            <input id="txtFName" type="text" placeholder="first name">
+            <input id="txtFName" placeholder="first name" type="text">
 
             <label for="txtLName">Last Name</label>
-            <input id="txtLName" type="text" placeholder="last name"><br><br>
+            <input id="txtLName" placeholder="last name" type="text"><br><br>
 
             <label for="txtEmail">Email</label>
-            <input id="txtEmail" type="email" size="30"><br><br>
+            <input id="txtEmail" size="30" type="email"><br><br>
 
             <label for="txtMsg">Your Message</label>
             <textarea id="txtMsg"></textarea><br><br>
@@ -1413,11 +1588,13 @@
         </address>
         <!--social links-->
         <address>
-            <a href="https://www.linkedin.com/in/hansani-amaradasa-0732a4226/"><img src="assets/icons/in.png" alt="" width="30"></a>
-            <a href="https://m.facebook.com/hansani.hiruprabaha"><img src="assets/icons/fb.png" alt="" width="30"></a>
-            <a href="https://mobile.twitter.com/HHiruprabha"><img src="assets/icons/twitter.png" alt="" width="30"></a>
-            <img src="assets/icons/whatsApp.png" alt="" width="30">
-            <a href="https://www.youtube.com/channel/UCd6mSQ12REJEWmNwHBGugrg"><img src="assets/icons/uTube.png" alt="" width="30"></a>
+            <a href="https://www.linkedin.com/in/hansani-amaradasa-0732a4226/"><img alt="" src="assets/icons/in.png"
+                                                                                    width="30"></a>
+            <a href="https://m.facebook.com/hansani.hiruprabaha"><img alt="" src="assets/icons/fb.png" width="30"></a>
+            <a href="https://mobile.twitter.com/HHiruprabha"><img alt="" src="assets/icons/twitter.png" width="30"></a>
+            <img alt="" src="assets/icons/whatsApp.png" width="30">
+            <a href="https://www.youtube.com/channel/UCd6mSQ12REJEWmNwHBGugrg"><img alt="" src="assets/icons/uTube.png"
+                                                                                    width="30"></a>
 
         </address>
     </section>
