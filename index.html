@@ -107,7 +107,7 @@
 
         main > section {
             /*border: 2px solid red;*/
-            padding-top: 50px;
+            padding-top: 60px;
             /*margin-top: 60px;*/
             position: relative;
             z-index: 1;
@@ -1279,6 +1279,7 @@
         /*Main Ends*/
 
         /*Footer starts*/
+        /*Contact Form Starts*/
         #contact{
             /*border: 2px solid blue;*/
             display: flex;
@@ -1295,7 +1296,7 @@
 
         #contact>section{
             /*border: 2px solid red;*/
-            margin: 150px 50px 50px 50px;
+            margin: 150px 50px 30px 50px;
             flex-basis: 90%;
         }
 
@@ -1303,15 +1304,16 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            font-family: 'Monda', sans-serif;
+            font-family: 'Barlow', sans-serif;
             border: none;
         }
 
         fieldset>input{
             margin: 0 10px 10px  0;
-            height: 30px;
+            height: 20px;
             border-radius: 3px;
             border: none;
+            padding: 10px;
         }
 
         input:focus {
@@ -1328,10 +1330,6 @@
             outline: none;
         }
 
-        /*fieldset label[for="txtLName"]{
-            position: relative;
-            !*margin-top: 10px;*!
-        }*/
         fieldset label[for="txtEmail"]{
             margin-top: 10px;
         }
@@ -1348,7 +1346,86 @@
             background-color: #487eb0;
             cursor: pointer;
         }
+        /*Contact Form Ends*/
 
+        /*Section 2 starts*/
+            #fSideTwo{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            #contactForm{
+                border: 3px solid orangered;
+                flex-basis: 500px;
+            }
+
+
+            #fSideTwo>address:nth-child(1){
+                flex-basis: 400px;
+                flex-grow: 1;
+            }
+
+            #fSideTwo>address:nth-child(2){
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-basis: 70px;
+            }
+
+            .contactCard{
+                position: relative;
+            }
+
+
+            .contactCard>div:nth-child(1){
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -62px;
+                margin: auto;
+                border: 10px solid #273c75;
+                background-image: url("assets/images/toon.jpeg");
+                background-size: cover;
+                border-radius: 100%;
+                width: 100px;
+                height: 100px;
+                z-index: 2;
+            }
+
+            .card{
+                border: 3px solid #273c75;
+                background-color: #5555;
+                border-radius: 5px;
+                position: absolute;
+                bottom: 0;
+                height: 309px;
+                padding: 30px 40px 30px 40px;
+                z-index: 1;
+            }
+
+            .card>h4{
+                text-align: center;
+            }
+
+            .card>p{
+                margin-left: 40px;
+                padding: 30px;
+            }
+
+            .card>ul{
+                list-style: none;
+                margin-left: 131px;
+            }
+
+            .card>ul>li{
+                padding: 14px;
+            }
+
+            .card>ul>li>img{
+                padding-right: 20px;
+            }
+        /*Section 2 ends*/
         /*Footer Ends*/
     </style>
 
@@ -1633,7 +1710,7 @@
 </main>
 <footer id="contact">
     <h1>Contact</h1>
-    <section>
+    <section id="contactForm">
         <!--Form-->
         <form>
             <fieldset>
@@ -1654,14 +1731,22 @@
         </form>
     </section>
 
-    <section>
-        <address>
+    <section id="fSideTwo">
+        <address class="contactCard">
             <!--image-->
-            <ul>
-                <li>Hansani Hiruprabha</li>
-                <li>hansaniah@gmail.com</li>
-                <li>0703149167</li>
-            </ul>
+            <div>
+                <div></div>
+            </div>
+            <div class="card">
+                <h4>Hansani Hiruprabha</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi enim, eveniet magnam
+                    numquam odit qui.</p>
+                <ul>
+                    <li><img src="assets/icons/mail.png">hansaniah@gmail.com</li>
+                    <li><img src="assets/icons/phone.png"></i>0703149167</li>
+                </ul>
+            </div>
+
         </address>
         <!--social links-->
         <address>
