@@ -30,7 +30,7 @@
         /*Header start*/
         body > header {
             /*background: #e46d2a;*/
-            background: linear-gradient(60deg,#FF512F,#F09819);
+            background: linear-gradient(60deg, #FF512F, #F09819);
             position: fixed;
             height: 80px;
             /*width: 1519px;*/
@@ -707,7 +707,7 @@
             margin: auto;
         }
 
-        .skillTree>p >a{
+        .skillTree > p > a {
             position: absolute;
             bottom: 50px;
             right: 316px;
@@ -972,20 +972,21 @@
             /* flex-grow: 1;*/
         }
 
-        #mProj>section>section:hover{
+        #mProj > section > section:hover {
             transform: scale(1.1);
             transition: all;
             transition-duration: 1s;
         }
 
-        a{
+        a {
             text-decoration: none;
         }
 
-        #mProj>section>section>a:hover{
+        #mProj > section > section > a:hover {
             text-decoration: none;
         }
-        #mProj>section>section figure:hover{
+
+        #mProj > section > section figure:hover {
             flex-basis: 105px;
             flex-grow: 2;
         }
@@ -1001,7 +1002,7 @@
         }
 
 
-        #mProj > section > section figure figcaption{
+        #mProj > section > section figure figcaption {
             /*border: 2px solid skyblue;*/
             position: absolute;
             top: 0;
@@ -1015,98 +1016,100 @@
             font-size: 22px;
         }
 
-        .layouts figure:nth-child(1){
+        .layouts figure:nth-child(1) {
             background-image: url("assets/images/l_c1.png");
             background-size: cover;
             background-position: center;
         }
 
-        .layouts>figure:nth-child(2){
+        .layouts > figure:nth-child(2) {
             background-image: url("assets/images/l_c2.png");
             background-size: cover;
             background-position: center;
         }
 
-        .layouts>figure:nth-child(3){
+        .layouts > figure:nth-child(3) {
             background-image: url("assets/images/l_c3.png");
             background-size: cover;
             background-position: center;
         }
 
-        .layouts>figure:nth-child(4){
+        .layouts > figure:nth-child(4) {
             background-image: url("assets/images/l_c4.png");
             background-size: cover;
             background-position: center;
         }
 
-        .animations>figure:nth-child(1){
+        .animations > figure:nth-child(1) {
             background-image: url("assets/images/a_c1.png");
             background-size: cover;
             background-position: center;
         }
 
-        .animations>figure:nth-child(2){
+        .animations > figure:nth-child(2) {
             background-image: url("assets/images/a_c2.png");
             background-size: cover;
             background-position: center;
         }
 
-        .animations>figure:nth-child(3){
+        .animations > figure:nth-child(3) {
             background-image: url("assets/images/a_c3.png");
             background-size: cover;
             background-position: center;
         }
 
-        .animations>figure:nth-child(4){
+        .animations > figure:nth-child(4) {
             background-image: url("assets/images/a_c4.png");
             background-size: cover;
             background-position: center;
         }
 
-        .transitions>figure:nth-child(1){
+        .transitions > figure:nth-child(1) {
             background-image: url("assets/images/t_c1.png");
             background-size: cover;
             background-position: center;
         }
 
-        .transitions>figure:nth-child(2){
+        .transitions > figure:nth-child(2) {
             background-image: url("assets/images/t_c2.png");
             background-size: cover;
             background-position: center;
         }
 
-        .responsive>figure{
+        .responsive > figure {
             background-image: url("assets/images/res.png");
             background-size: cover;
             background-position: center;
         }
 
-        .layouts{
+        .layouts {
             background-color: red;
             border-radius: 10px;
         }
 
-        .animations{
+        .animations {
             background-color: #ff9f43;
             border-radius: 10px;
         }
 
-        .transitions{
+        .transitions {
             background-color: #8e44ad;
             border-radius: 10px;
         }
 
-        .responsive{
+        .responsive {
             background-color: #079992;
             border-radius: 10px;
         }
+
         /*MyProjects Ends*/
 
         /*Activities Starts*/
         #activ {
-            border: 2px solid red;
+            /*border: 2px solid red;*/
             font-family: 'Barlow', sans-serif;
             padding: 22px;
+            height: 2500px;
         }
 
         #activ > h1 {
@@ -1115,18 +1118,176 @@
             margin-bottom: 5px;
         }
 
+        #activ > section:nth-child(3) {
+            /*border: 2px solid blue;*/
+            display: flex;
+            flex-direction: column;
+            flex-basis: 500px;
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+        }
+
+        #activ > section > section {
+            border: 2px solid green;
+            display: flex;
+            flex-basis: 450px;
+            justify-content: space-around;
+        }
+
+        #activ > section > section > section {
+            /*border: 2px solid white;*/
+            flex-basis: 1200px;
+            position: relative;
+        }
+
+        #activ > section > section > section > div {
+            /*background: #a148a1;*/
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+
+        #activ > section:nth-child(3) > section > section > div:nth-child(1) {
+            left: 336px;
+            top: 16px;
+        }
+
+        #activ > section > section > section > div:nth-child(2) {
+            top: 218px;
+            left: 336px;
+        }
+
+        #activ > section > section > section > div:nth-child(3) {
+            top: 117px;
+            left: 184px;
+        }
+
+        .activ1 > section > div:nth-child(1) {
+            background-image: url("assets/images/foody1.jpeg");
+            background-size: cover;
+        }
+
+        .activ1 > section > div:nth-child(2) {
+            background-image: url("assets/images/foody2.jpeg");
+            background-size: cover;
+        }
+
+        .activ1 > section > div:nth-child(3) {
+            background-image: url("assets/images/foody6.jpeg");
+            background-size: cover;
+        }
+
+        .activ2 > section > div:nth-child(1) {
+            background-image: url("assets/images/g1.jpeg");
+            background-size: cover;
+        }
+
+        .activ2 > section > div:nth-child(2) {
+            background-image: url("assets/images/g2.jpeg");
+            background-size: cover;
+        }
+
+        .activ2 > section > div:nth-child(3) {
+            background-image: url("assets/images/g3.jpeg");
+            background-size: cover;
+        }
+
+        .activ3 > section > div:nth-child(1) {
+            background-image: url("assets/images/d1.jpeg");
+            background-size: cover;
+        }
+
+        .activ3 > section > div:nth-child(2) {
+            background-image: url("assets/images/d2.jpeg");
+            background-size: cover;
+        }
+
+        .activ3 > section > div:nth-child(3) {
+            background-image: url("assets/images/d3.jpeg");
+            background-size: cover;
+        }
+
+        .activ4 > section > div:nth-child(1) {
+            background-image: url("assets/images/stmp5.jpeg");
+            background-size: cover;
+        }
+
+        .activ4 > section > div:nth-child(2) {
+            background-image: url("assets/images/stmp1.jpeg");
+            background-size: cover;
+        }
+
+        .activ4 > section > div:nth-child(3) {
+            background-image: url("assets/images/stmp2.jpeg");
+            background-size: cover;
+        }
+
         #activ .hexagon {
             border: 2px solid red;
-            height: 400px;
-            width: 400px;
+            width: 432px;
+            height: 355px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 195px;
+            margin: auto;
             display: flex;
             align-items: center;
+        }
+
+        #activ .hexagon > div > a > div {
+            position: absolute;
+            border: 2px solid white;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #activ .hexagon > div > a{
+            text-decoration: none;
+            color: white;
         }
 
         #activ .hexagon > div:hover {
             opacity: 70%;
             transition: all;
             transition-duration: 0.3s;
+        }
+
+        #activ .hexagon > div:nth-child(1) > a > div {
+            bottom: 67px;
+            left: -28px;
+        }
+
+        #activ .hexagon > div:nth-child(2) > a > div {
+            top: 72px;
+            left: -27px;
+        }
+
+        #activ .hexagon > div:nth-child(3) > a > div {
+            top: 70px;
+            left: -27px;
+        }
+
+        #activ .hexagon > div:nth-child(4) > a > div {
+            top: -125px;
+            left: -28px;
+        }
+
+        #activ .hexagon > div:nth-child(5) > a > div {
+            top: 68px;
+            left: -26px;
+        }
+
+        #activ .hexagon > div:nth-child(6) > a > div {
+            top: -122px;
+            left: -26px;
         }
 
         #activ .hexagon > div:nth-child(1) {
@@ -1136,7 +1297,7 @@
             width: 0;
             height: 0;
             position: absolute;
-            top: 211px;
+            top: 11px;
             left: 129px;
             border-top: 150px solid red;
             border-right: 90px solid transparent;
@@ -1147,7 +1308,7 @@
             width: 0;
             height: 0;
             position: absolute;
-            top: 217px;
+            top: 18px;
             left: 229px;
             /*border-top: 100px solid #346FB0;*/
             border-bottom: 150px solid #8e44ad;
@@ -1159,7 +1320,7 @@
             width: 0;
             height: 0;
             position: absolute;
-            top: 217px;
+            top: 18px;
             left: 29px;
             /*border-top: 100px solid #346FB0;*/
             border-bottom: 150px solid #e1b12c;
@@ -1171,7 +1332,7 @@
             width: 0;
             height: 0;
             position: absolute;
-            top: 377px;
+            top: 181px;
             left: 31px;
             /*border-top: 100px solid #346FB0;*/
             border-top: 150px solid #e67e22;
@@ -1183,7 +1344,7 @@
             width: 0;
             height: 0;
             position: absolute;
-            top: 381px;
+            top: 188px;
             left: 131px;
             /*border-top: 100px solid #346FB0;*/
             border-bottom: 150px solid #00cec9;
@@ -1195,7 +1356,7 @@
             width: 0;
             height: 0;
             position: absolute;
-            top: 378px;
+            top: 181px;
             left: 231px;
             /*border-top: 100px solid #346FB0;*/
             border-top: 150px solid #2ed573;
@@ -1203,14 +1364,14 @@
             border-left: 90px solid transparent;
         }
 
-        /*#activ .hexagon>div:nth-child(1)::after {
+        /*#activ .hexagon > div:nth-child(1)::after {
             content: "A";
             opacity: 0;
             position: absolute;
             background: #a148a1;
         }
 
-        #activ .hexagon>div:nth-child(1):hover::after {
+        #activ .hexagon > div:nth-child(1):hover::after {
             content: "A";
             opacity: 100%;
             position: absolute;
@@ -1223,84 +1384,32 @@
             transition: all;
             transition-duration: 1s;
         }*/
-
-        /**#activ .hexagon>div:nth-child(1)::after{
-            content: "A";
-            opacity: 0;
-            position: absolute;
-            background: #a148a1;
-        }
-
-        #activ .hexagon>div:nth-child(1):hover::after{
-            opacity: 100%;
-            background: #a148a1;
-            transform: scale(1);
-            left: 700px;
-            width: 200px;
-            height: 200px;
-        }
-
-        #activ .hexagon>div:nth-child(1):hover{
-            transform: scale(1.1);
-        }
-
-        #activ .hexagon>div:nth-child(1)>div{
-            !*background: #346FB0;
-            width: 100px;
-            height: 100px;
-            position: absolute;*!
-            width: 0;
-            height: 0;
-            position: absolute;
-            left: 130px;
-            border-top: 120px solid red;
-            border-right:90px solid transparent;
-            border-left: 90px solid transparent;
-        }
-
-        #activ .hexagon>div:nth-child(1)>div::after{
-            content: "B";
-            background: red;
-            position: absolute;
-            opacity: 0;
-        }
-
-        #activ .hexagon>div:nth-child(1)>div:hover::after{
-            width: 200px;
-            height: 200px;
-            opacity: 100%;
-            transform: scale(1);
-            background: #a148a1;
-            background-size: cover;
-            left: 900px;
-        }*/
         /*Activities Ends*/
-
         /*Main Ends*/
 
         /*Footer starts*/
         /*Contact Form Starts*/
-        #contact{
+        #contact {
             /*border: 2px solid blue;*/
             display: flex;
             justify-content: space-around;
             height: 650px;
         }
 
-        #contact>h1{
+        #contact > h1 {
             position: absolute;
             font-size: 70px;
             left: 20px;
             font-family: 'Ubuntu', sans-serif;
         }
 
-        #contact>section{
+        #contact > section {
             /*border: 2px solid red;*/
             margin: 150px 50px 30px 50px;
             flex-basis: 90%;
         }
 
-        footer fieldset{
+        footer fieldset {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -1308,8 +1417,8 @@
             border: none;
         }
 
-        fieldset>input{
-            margin: 0 10px 10px  0;
+        fieldset > input {
+            margin: 0 10px 10px 0;
             height: 20px;
             border-radius: 3px;
             border: none;
@@ -1321,20 +1430,20 @@
             outline: none;
         }
 
-        #txtMsg{
+        #txtMsg {
             height: 100px;
         }
 
-        #txtMsg:focus{
+        #txtMsg:focus {
             border: 3px solid #555;
             outline: none;
         }
 
-        fieldset label[for="txtEmail"]{
+        fieldset label[for="txtEmail"] {
             margin-top: 10px;
         }
 
-        #btn{
+        #btn {
             height: 40px;
             border-radius: 9px;
             background-color: #273c75;
@@ -1342,89 +1451,91 @@
             border: none;
         }
 
-        #btn:hover{
+        #btn:hover {
             background-color: #487eb0;
             cursor: pointer;
         }
+
         /*Contact Form Ends*/
 
         /*Section 2 starts*/
-            #fSideTwo{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
+        #fSideTwo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-            #contactForm{
-                border: 3px solid orangered;
-                flex-basis: 500px;
-            }
-
-
-            #fSideTwo>address:nth-child(1){
-                flex-basis: 400px;
-                flex-grow: 1;
-            }
-
-            #fSideTwo>address:nth-child(2){
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
-                flex-basis: 70px;
-            }
-
-            .contactCard{
-                position: relative;
-            }
+        #contactForm {
+            border: 3px solid orangered;
+            flex-basis: 500px;
+        }
 
 
-            .contactCard>div:nth-child(1){
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: -62px;
-                margin: auto;
-                border: 10px solid #273c75;
-                background-image: url("assets/images/toon.jpeg");
-                background-size: cover;
-                border-radius: 100%;
-                width: 100px;
-                height: 100px;
-                z-index: 2;
-            }
+        #fSideTwo > address:nth-child(1) {
+            flex-basis: 400px;
+            flex-grow: 1;
+        }
 
-            .card{
-                border: 3px solid #273c75;
-                background-color: #5555;
-                border-radius: 5px;
-                position: absolute;
-                bottom: 0;
-                height: 309px;
-                padding: 30px 40px 30px 40px;
-                z-index: 1;
-            }
+        #fSideTwo > address:nth-child(2) {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-basis: 70px;
+        }
 
-            .card>h4{
-                text-align: center;
-            }
+        .contactCard {
+            position: relative;
+        }
 
-            .card>p{
-                margin-left: 40px;
-                padding: 30px;
-            }
 
-            .card>ul{
-                list-style: none;
-                margin-left: 131px;
-            }
+        .contactCard > div:nth-child(1) {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -62px;
+            margin: auto;
+            border: 10px solid #273c75;
+            background-image: url("assets/images/toon.jpeg");
+            background-size: cover;
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            z-index: 2;
+        }
 
-            .card>ul>li{
-                padding: 14px;
-            }
+        .card {
+            border: 3px solid #273c75;
+            background-color: #5555;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            height: 309px;
+            padding: 30px 40px 30px 40px;
+            z-index: 1;
+        }
 
-            .card>ul>li>img{
-                padding-right: 20px;
-            }
+        .card > h4 {
+            text-align: center;
+        }
+
+        .card > p {
+            margin-left: 40px;
+            padding: 30px;
+        }
+
+        .card > ul {
+            list-style: none;
+            margin-left: 131px;
+        }
+
+        .card > ul > li {
+            padding: 14px;
+        }
+
+        .card > ul > li > img {
+            padding-right: 20px;
+        }
+
         /*Section 2 ends*/
         /*Footer Ends*/
     </style>
@@ -1618,9 +1729,9 @@
         <section>
             <section class="layouts">
                 <figure>
-                        <a href="myprojects/CSS/Layouts/01.Assignment/Case_01.html" target="_blank">
-                            <figcaption></figcaption>
-                        </a>
+                    <a href="myprojects/CSS/Layouts/01.Assignment/Case_01.html" target="_blank">
+                        <figcaption></figcaption>
+                    </a>
                 </figure>
 
                 <figure>
@@ -1693,19 +1804,88 @@
         <h1>Activities</h1>
         <section class="hexagon">
             <div>
-                <!--<div></div>-->
+                <a href="#a1">
+                    <div>
+                        <h1>1</h1>
+                    </div>
+                </a>
             </div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+                <a href="#a2">
+                    <div>
+                        <h1>2</h1>
+                    </div>
+                </a>
+
+            </div>
+            <div>
+                <a href="#a3">
+                    <div>
+                        <h1>3</h1>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="#a4">
+                    <div>
+                        <h1>4</h1>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <div>
+                        <h1>5</h1>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <div>
+                        <h1>6</h1>
+                    </div>
+                </a>
+            </div>
         </section>
-        <section class="desc">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam architecto asperiores
-                deserunt earum est, in, incidunt ipsa iste labore molestiae nesciunt nostrum officia praesentium quasi
-                suscipit vel? In, sapiente.</p>
+        <section>
+            <section class="activ1" id="a1">
+                <section>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at aut dicta, ea itaque iure
+                    molestias nulla quam, sed sit totam unde ut. </p>
+            </section>
+            <section class="activ2" id="a2">
+                <section>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at aut dicta, ea itaque iure
+                    molestias nulla quam, sed sit totam unde ut. </p>
+            </section>
+            <section class="activ3" id="a3">
+                <section>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at aut dicta, ea itaque iure
+                    molestias nulla quam, sed sit totam unde ut. </p>
+            </section>
+            <section class="activ4" id="a4">
+                <section>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at aut dicta, ea itaque iure
+                    molestias nulla quam, sed sit totam unde ut. </p>
+            </section>
         </section>
+
     </section>
 </main>
 <footer id="contact">
@@ -1721,7 +1901,7 @@
                 <input id="txtLName" placeholder="last name" type="text">
 
                 <label for="txtEmail">Email</label>
-                <input id="txtEmail" size="30" type="email" placeholder="@example.gmail.com"><br>
+                <input id="txtEmail" placeholder="@example.gmail.com" size="30" type="email"><br>
 
                 <label for="txtMsg">Your Message</label>
                 <textarea id="txtMsg"></textarea><br><br>
