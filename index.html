@@ -395,7 +395,7 @@
             /*border: 2px solid red;*/
             font-family: 'Barlow', sans-serif;
             padding: 22px;
-            height: 600px;
+            height: 750px;
         }
 
         #about > h1 {
@@ -452,7 +452,7 @@
             /* position: relative; */
             /* width: 600px; */
             height: 120px;
-            flex-basis: 600px;
+            flex-basis: 569px;
             margin: 50px;
         }
 
@@ -1587,7 +1587,6 @@
                 width: 111vh;
                 height: 111vh;
                 top: 22vh;
-                /*background-image: url("assets/images/myPic.jpeg");*/
                 background-size: cover;
                 /*top: 76vh;*/
                 left: 0;
@@ -1607,13 +1606,6 @@
             }
 
             #home > section:nth-child(1) > div:nth-child(2) {
-                /* border: 2px solid blue; */
-                /*position: absolute;
-                top: 0;
-                background-image: url(assets/images/myPic.jpeg);
-                background-size: cover;
-                background-position: center;
-                bottom: 0;*/
                 margin: auto;
                 width: 100vh;
                 height: 100vh;
@@ -1674,8 +1666,16 @@
             }
 
             #about{
-                height: 368vh;
+                height: 386vh;
                 font-size: 46px;
+            }
+
+            #about>h1{
+                font-size: 119px;
+            }
+
+            #about>p{
+                top: 30vh;
             }
 
             #about>section{
@@ -1686,7 +1686,7 @@
 
             #about>div{
                 font-size: 53px;
-                top: 60vh;
+                top: 67vh;
             }
 
             #about>section>article{
@@ -1698,6 +1698,12 @@
                 font-size: 33px;
             }
 
+        }
+
+        @media all and (max-width: 1024px) and (min-width: 426px){
+            main{
+                margin-right: -574px;
+            }
         }
 
         /*Section 2 ends*/
