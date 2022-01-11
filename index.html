@@ -23,12 +23,6 @@
     <meta name="viewport" content="width=device-width initial scale=1">
 
     <style>
-        .main {
-            position: relative;
-            background-color: #1d1212;
-            color: white;
-        }
-
         /*Header start*/
 
         header {
@@ -104,15 +98,19 @@
 
 
         /*Main starts*/
-        main {
-            /*border: 2px solid blue;*/
+        body{
+            position: relative;
+            background-color: #1d1212;
+            color: white;
         }
 
         main > section {
-            /*border: 2px solid red;*/
-            padding-top: 60px;
+            border: 2px solid red;
             /*margin-top: 60px;*/
+            padding-top: 60px;
             position: relative;
+            left: 0;
+            right: 0;
             z-index: 1;
             margin-bottom: 40px;
         }
@@ -120,6 +118,7 @@
 
         #home {
             position: relative;
+            padding-top: 0;
             height: 649px;
         }
 
@@ -177,7 +176,7 @@
 
 
         #home > section:nth-child(2) {
-            /*border: 2px solid red;*/
+            border: 2px solid red;
             /*height: 689px;
             width: 1271px;
             position: absolute;
@@ -1571,6 +1570,78 @@
                 background: linear-gradient(to bottom right, #FF512F, #F09819);
             }
 
+            main{
+                margin-right: -790px;
+            }
+
+            #home{
+                height: 285vh;
+            }
+
+            #home > section:nth-child(1) >div:nth-child(1){
+                display: none;
+            }
+
+            #home>section:nth-child(1){
+                border: 2px solid blue;
+                width: 111vh;
+                height: 111vh;
+                top: 22vh;
+                /*background-image: url("assets/images/myPic.jpeg");*/
+                background-size: cover;
+                /*top: 76vh;*/
+                left: 0;
+                right: 0;
+                margin: auto;
+                z-index: 1;
+                /*position: relative;*/
+            }
+
+            #home>section:nth-child(2){
+                margin-left: 0;
+                height: 125vh;
+            }
+
+            #home>section:nth-child(2)>div{
+                height: 103vh;
+            }
+
+            #home > section:nth-child(1) > div:nth-child(2) {
+                /* border: 2px solid blue; */
+                /*position: absolute;
+                top: 0;
+                background-image: url(assets/images/myPic.jpeg);
+                background-size: cover;
+                background-position: center;
+                bottom: 0;*/
+                margin: auto;
+                width: 100vh;
+                height: 100vh;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                border-radius: 100%;
+            }
+
+            #home > section:nth-child(2) > div {
+                /* border: 2px solid pink; */
+                position: absolute;
+                top: 179px;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+
+            #home>div{
+                height: 211vh;
+                position: static;
+            }
+
+            #home>section:nth-child(1){
+                border: 2px solid green;
+            }
+
             .navigationBar{
                 /*border: 2px solid white;*/
                 height: 800px;
@@ -1602,6 +1673,31 @@
                 padding: 20px;
             }
 
+            #about{
+                height: 368vh;
+                font-size: 46px;
+            }
+
+            #about>section{
+                flex-direction: column;
+                font-size: 46px;
+                top: 67vh;
+            }
+
+            #about>div{
+                font-size: 53px;
+                top: 60vh;
+            }
+
+            #about>section>article{
+                flex-basis: 50vh;
+                font-size: 33px;
+            }
+
+            #about>section>article>h4{
+                font-size: 33px;
+            }
+
         }
 
         /*Section 2 ends*/
@@ -1609,7 +1705,7 @@
     </style>
 
 </head>
-<body class="main">
+<body>
 <header>
     <!--<nav>-->
         <ul class="navigationBar">
