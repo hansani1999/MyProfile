@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>MyProfile</title>
     <link href="assets/icons/favIcon.png" rel="icon">
-    <meta content="width=device-width initial-scale=1" name="viewport">
+    <!--<meta content="#fd6538" name="theme-color">-->
     <link href="assets/css/fonts/css/all.css" rel="stylesheet">
     <!--<link rel="stylesheet" href="assets/css/styles.css">-->
     <link href="assets/css/normalize.css" rel="stylesheet">
@@ -20,20 +20,22 @@
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Bowlby+One+SC&family=Lobster&family=Monda:wght@700&family=Signika+Negative:wght@600&display=swap"
           rel="stylesheet">
+    <meta name="viewport" content="width=device-width initial scale=1">
 
     <style>
         .main {
+            position: relative;
             background-color: #1d1212;
             color: white;
         }
 
         /*Header start*/
-        body > header {
-            /*background: #e46d2a;*/
+
+        header {
+            color: #fd6538;
             background: linear-gradient(60deg, #FF512F, #F09819);
             position: fixed;
             height: 80px;
-            /*width: 1519px;*/
             box-shadow: -2px 8px 18px -4px #1b1919;
             top: 0;
             left: 0;
@@ -42,25 +44,26 @@
             z-index: 3;
         }
 
-        body > header > nav {
-            /*border: 2px solid blue;*/
+       /* body > header > nav {
+            !*border: 2px solid blue;*!
             position: absolute;
             top: 20px;
             bottom: 0;
             left: 0;
             right: 0;
             margin: auto;
-        }
+        }*/
 
         .navigationBar {
             /*border: 2px solid red;*/
             list-style: none;
             position: absolute;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             justify-content: center;
             /*background: #e46d2a;*/
             font-family: 'Ubuntu', sans-serif;
+            /*font-family: 'Lobster', cursive;*/
             right: 30px;
             height: 50px;
             margin-top: 0;
@@ -72,13 +75,13 @@
         }
 
 
-        body > header > nav > ul > li {
+        body > header > /*nav >*/ ul > li {
             /*border: 2px solid white;*/
             height: 39px;
             display: inline-block;
             padding: 0 10px 0 10px;
-            margin-top: 20px;
-            font-size: 18px;
+            margin-top: 44px;
+            font-size: 20px;
         }
 
         /*body>header>nav>ul>li:hover{
@@ -86,12 +89,12 @@
             color: black;
         }*/
 
-        body > header > nav > ul > li > a:hover {
+        body > header /*> nav*/ > ul > li > a:hover {
             cursor: pointer;
             color: black;
         }
 
-        body > header > nav > ul > li > a {
+        body > header > /*nav >*/ ul > li > a {
             text-decoration: none;
             color: white;
             margin-left: 4px;
@@ -418,21 +421,47 @@
             margin-left: 20px;
         }
 
-        #about > article {
-            border: 2px solid darkgray;
-            border-radius: 40px;
+        #about>section{
+            /*border: 2px solid red;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;*/
+            border: 2px solid red;
+            /* height: 500px; */
+            display: flex;
+            /* align-items: center; */
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+            top: 100px;
+        }
+
+        #about > section> article {
+            /*border: 2px solid darkgray;
+
             position: absolute;
             width: 600px;
             height: 120px;
-            margin: 40px;
+            !*margin: 40px;
+            *!*/
+            border: 2px solid darkgray;
+            border-radius: 40px;
             padding: 10px;
+            /* border-radius: 40px; */
+            /* position: relative; */
+            /* width: 600px; */
+            height: 120px;
+            flex-basis: 600px;
+            margin: 50px;
         }
 
-        #about > article > div {
+        #about >section> article > div {
             width: 200px;
         }
 
-        #about > article > h4 {
+        article > h4 {
             background: linear-gradient(to bottom, deepskyblue, lightsteelblue);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -440,22 +469,22 @@
             font-family: 'Ubuntu', sans-serif;
         }
 
-        #about > article:nth-child(4) {
+        section>article:nth-child(1) {
             left: 0;
             top: 240px;
         }
 
-        #about > article:nth-child(5) {
+        section>article:nth-child(2) {
             left: 0;
             bottom: 0;
         }
 
-        #about > article:nth-child(6) {
+        section>article:nth-child(3) {
             right: 0;
             top: 240px;
         }
 
-        #about > article:nth-child(7) {
+        section>article:nth-child(4) {
             right: 0;
             bottom: 0;
         }
@@ -1536,6 +1565,45 @@
             padding-right: 20px;
         }
 
+        @media all and (max-width: 426px){
+            header{
+                height: 200px;
+                background: linear-gradient(to bottom right, #FF512F, #F09819);
+            }
+
+            .navigationBar{
+                /*border: 2px solid white;*/
+                height: 800px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin-top: -800px;
+                background-color: #555555;
+                opacity: 99%;
+                /*margin: auto;*/
+            }
+
+              header::after{
+                  content: url("assets/icons/menu.png");
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-top: 88px;
+              }
+            header:hover>.navigationBar{
+                margin-top: 200px;
+            }
+
+            .navigationBar>li{
+                font-size: 60px;
+                padding: 20px;
+            }
+
+        }
+
         /*Section 2 ends*/
         /*Footer Ends*/
     </style>
@@ -1543,7 +1611,7 @@
 </head>
 <body class="main">
 <header>
-    <nav>
+    <!--<nav>-->
         <ul class="navigationBar">
             <li><a href="#home"><i class="fas fa-home"></i>HOME</a></li>
             <li><a href="#about"><i class="fas fa-info-circle"></i>ABOUT</a></li>
@@ -1553,7 +1621,7 @@
             <!--<li><i class="fab fa-black-tie"></i><a href="">Experience</a></li>-->
             <li><a href="#contact"><i class="fas fa-address-book"></i>CONTACT</a></li>
         </ul>
-    </nav>
+   <!-- </nav>-->
 </header>
 <main>
     <section id="home">
@@ -1608,26 +1676,29 @@
         </div>
 
         <!--box 1-->
-        <article>
-            <h4>Web Application Development</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore est fugit illo ipsa nesciunt.</p>
-        </article>
-        <!--box 2-->
-        <article>
-            <h4>Stand Alone Application Development</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, explicabo iusto minima nostrum.</p>
-        </article>
-        <!--box 3-->
-        <article>
-            <h4>Database Management</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias distinctio ex natus quas
-                qui.</p>
-        </article>
-        <!--box 4-->
-        <article>
-            <h4>SEO</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolorum </p>
-        </article>
+        <section>
+            <article>
+                <h4>Web Application Development</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore est fugit illo ipsa nesciunt.</p>
+            </article>
+            <!--box 2-->
+            <article>
+                <h4>Stand Alone Application Development</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, explicabo iusto minima nostrum.</p>
+            </article>
+            <!--box 3-->
+            <article>
+                <h4>Database Management</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias distinctio ex natus quas
+                    qui.</p>
+            </article>
+            <!--box 4-->
+            <article>
+                <h4>SEO</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolorum </p>
+            </article>
+        </section>
+
 
     </section>
     <section id="edu">
