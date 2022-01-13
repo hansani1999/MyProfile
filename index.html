@@ -105,8 +105,6 @@
         }
 
         main > section {
-            /*border: 2px solid red;*/
-            /*margin-top: 60px;*/
             padding-top: 60px;
             position: relative;
             left: 0;
@@ -118,7 +116,6 @@
 
         #home {
             position: relative;
-            padding-top: 0;
             height: 649px;
         }
 
@@ -245,6 +242,9 @@
         .overlay > div:nth-child(1) {
             /*border: 2px solid white;*/
             background: white;
+            color: #1d1212;
+            list-style: none;
+            font-family: 'Monda', sans-serif;
             border-radius: 20px;
             width: 300px;
             height: 500px;
@@ -254,6 +254,23 @@
             right: 20px;
             left: 20px;
             margin: auto;
+        }
+
+        .overlay > div:nth-child(1)>ul{
+            margin-top: 89px;
+            margin-right: 36px;
+        }
+
+        .overlay > div:nth-child(1)>ul>li{
+            display: block;
+            padding: 21px 8px 12px 8px;
+            margin-bottom: 10px;
+        }
+
+        .overlay>div:nth-child(1)>p{
+            position: relative;
+            top: 57px;
+            text-align: center
         }
 
         .overlay > div:nth-child(2) {
@@ -1860,8 +1877,18 @@
         <section>
             <!--image-->
             <div class="overlay">
-                <div></div>
-                <div></div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <ul>
+                        <li><img src="assets/icons/icons8_contacts_26px.png">W.Hansani Hiruprabha Amaradasa</li>
+                        <li><img src="assets/icons/icons8_planner_24px_1.png">19 May 1999</li>
+                        <li><img src="assets/icons/icons8_location_32px.png">Galle, Srilanka</li>
+                        <li><img src="assets/icons/icons8_mail_24px.png">hansaniah@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+
+                </div>
             </div>
 
             <div></div>
