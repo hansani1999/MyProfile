@@ -28,7 +28,7 @@
                     <a class="nav-link" href="customer.html">Customers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pos3.html">Items</a>
+                    <a class="nav-link" href="item.html">Items</a>
                 </li>
             </ul>
         </div>
@@ -65,7 +65,7 @@
             <!-- Button trigger modal -->
             <div class="row justify-content-center">
                 <button type="button" class="btn btn-secondary col-5 m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <i class="fab fa-dropbox p-2"></i>New Item
+                    <i class="fab fa-dropbox p-2"></i>Add New Item
                 </button>
             </div>
             <!-- Modal -->
@@ -80,19 +80,19 @@
                             <form>
                                 <div class="mb-3">
                                     <label for="cid" class="form-label">Item Code</label>
-                                    <input type="text" class="form-control" id="cid" placeholder="C001">
+                                    <input type="text" class="form-control" id="cid" placeholder="I-001">
                                 </div>
                                 <div class="mb-3">
                                     <label for="input1" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="input1" placeholder="Kamal">
+                                    <input type="text" class="form-control" id="input1" placeholder="Item1">
                                 </div>
                                 <div class="mb-3">
                                     <label for="input1" class="form-label">Price</label>
-                                    <input type="text" class="form-control" id="input2" placeholder="Galle">
+                                    <input type="text" class="form-control" id="input2" placeholder="100.00">
                                 </div>
                                 <div class="mb-3">
                                     <label for="input3" class="form-label">Quantity</label>
-                                    <input type="text" class="form-control" id="input3" placeholder="50000.00">
+                                    <input type="text" class="form-control" id="input3" placeholder="100">
                                 </div>
                             </form>
                         </div>
@@ -104,9 +104,6 @@
                     </div>
                 </div>
             </div>
-            <!--<div class="row justify-content-center">
-                <button type="submit" class="btn btn-secondary col-5 m-2"><i class="fas fa-user-plus p-1"></i>New Customer</button>
-            </div>-->
         </section>
         <section class="container mt-3 p-0">
             <div class="row-6">
@@ -117,7 +114,7 @@
         </section>
         <section class="container mt-4 bg-light">
             <table class="table table-hover">
-                <thead class="bg-info bg-opacity-25">
+                <thead class="bg-danger bg-opacity-50">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Item Code</th>
@@ -139,7 +136,7 @@
                     <td>I-002</td>
                     <td>Item2</td>
                     <td>150.00</td>
-                    <td>50/td>
+                    <td>50</td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
