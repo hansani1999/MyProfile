@@ -4,15 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link href="assets/css/fonts/css/all.css" rel="stylesheet">
     <title>Home</title>
 </head>
 <body class="bg-light">
-        <!--<div class="d-flex pe-4 p-1 bd-highlight bg-primary fs-2 text-white flex-row-reverse mb-2 justify-content-between flex-lg-shrink-1 align-items-center">
-            <div class="text-center">Samanthas POS System</div>
-            <div>
-                <img src="assets/images/cart.png" alt="" height="80px">
-            </div>
-        </div>-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary container-fluid me-0">
             <div class="container-fluid">
                 <img src="assets/images/cart.png" alt="" height="80px">
@@ -38,10 +33,11 @@
                 </div>
             </div>
         </nav>
-    <main class="">
+    <main class="justify-content-center">
+        <section class="bg-white shadow rounded-2 mb-3 me-3 ms-4 mt-4 p-3 fs-1 text-center text-primary"><i class="fas fa-hand-holding-usd p-2"></i>Sales Point</section>
         <section class="row bg-white p-4 me-0 mt-0">
             <section class="col bg-primary bg-opacity-10 rounded-2 p-0 ms-2">
-                <div class="fs-6 text-center bg-light shadow p-2 ">Order Details</div>
+                <div class="fs-6 text-center bg-primary bg-opacity-25 shadow p-2 ">Order Details</div>
                 <div class="row p-4">
                     <div class="col mb-4">
                         <label for="oid" class="form-label">Order Id</label>
@@ -98,7 +94,7 @@
                 </div>
             </section>
             <section class="col bg-light rounded-2 p-0 ms-2">
-                <div class="fs-6 text-center text-white bg-primary bg-opacity-75 shadow p-2 ">Order Details</div>
+                <div class="fs-6 text-center text-white bg-info bg-opacity-50 shadow p-2 ">Payment</div>
                 <div class="row p-4">
                     <div class="col mb-3 fs-2 text-center">
                         <label for="code" class="form-label text-info">Total :</label>
@@ -128,7 +124,8 @@
                 </div>
             </section>
         </section>
-        <section class="container-fluid">
+        <!--<section class="bg-white shadow rounded-2 mb-3 me-3 ms-4 mt-4 p-3 fs-1 text-center text-primary"></section>-->
+        <section class="container-fluid p-3 ">
             <table class="table table-hover">
                 <thead class="bg-danger bg-opacity-50">
                 <tr>
@@ -175,6 +172,65 @@
                 </tr>
                 </tbody>
             </table>
+        </section>
+        <section class="container-fluid p-3">
+            <p>
+                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    View All Orderds
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <div class="container mb-2">
+                        <label for="txtSearch" class="form-label text-secondary"><i class="fas fa-search p-2"></i>Search Order</label>
+                        <input type="text" class="form-control" id="txtSearch" placeholder="Enter Order ID">
+                    </div>
+                    <table class="table table-hover">
+                        <thead class="bg-success bg-opacity-50">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Item Code</th>
+                            <th scope="col">Customer Id</th>
+                            <th scope="col">Order qty</th>
+                            <th scope="col">cost</th>
+                            <th scope="col">Order Date</th>
+                            <th scope="col">Edit</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="bg-success bg-opacity-10">
+                            <th scope="row">1</th>
+                            <td>O-001</td>
+                            <td>Item1</td>
+                            <td>C001</td>
+                            <td>5</td>
+                            <td>500</td>
+                            <td>1/23/2022</td>
+                            <td>
+                                <button class="btn btn-warning"><i class="fas fa-edit p-2"></i>Update</button>
+                                <button class="btn btn-danger"><i class="fas fa-trash-alt p-2"></i>Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr class="bg-success bg-opacity-10">
+                            <th scope="row">1</th>
+                            <td>O-001</td>
+                            <td>Item1</td>
+                            <td>C001</td>
+                            <td>5</td>
+                            <td>500</td>
+                            <td>1/23/2022</td>
+                            <td>
+                                <button class="btn btn-warning"><i class="fas fa-edit p-2"></i>Update</button>
+                                <button class="btn btn-danger"><i class="fas fa-trash-alt p-2"></i>Delete</button>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
         <!---->
     </main>
