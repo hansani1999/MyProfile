@@ -8,7 +8,7 @@
     <title>Home</title>
 </head>
 <body class="bg-light">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary container-fluid me-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary container-fluid me-0">
             <div class="container-fluid">
                 <img src="assets/images/cart.png" alt="" height="80px">
                 <div class="text-center me-5 text-white fs-2 fw-bold">Samanthas POS System</div>
@@ -16,7 +16,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#">Home</a>
                         </li>
@@ -30,13 +30,17 @@
                             <a class="nav-link"  href="item.html">Items</a>
                         </li>
                     </ul>
+                    <div class="d-flex">
+                        <div class="text-center text-white fs-6 "><a class="navbar-brand" href="#">Sign up</a></div>
+                        <div class="text-center text-white fs-6 "><a class="navbar-brand" href="#">Log out</a></div>
+                    </div>
                 </div>
             </div>
         </nav>
     <main class="justify-content-center">
         <section class="bg-white shadow rounded-2 mb-3 me-3 ms-4 mt-4 p-3 fs-1 text-center text-primary"><i class="fas fa-hand-holding-usd p-2"></i>Sales Point</section>
         <section class="row bg-white p-4 me-0 mt-0">
-            <section class="col bg-primary bg-opacity-10 rounded-2 p-0 ms-2">
+            <section class="col-12 col-md col-l col-xl mb-2 bg-primary bg-opacity-10 rounded-2 p-0 ms-2">
                 <div class="fs-6 text-center bg-primary bg-opacity-25 shadow p-2 ">Order Details</div>
                 <div class="row p-4">
                     <div class="col mb-4">
@@ -65,7 +69,7 @@
                     </div>
                 </div>
             </section>
-            <section class="col bg-primary bg-opacity-25 rounded-2 p-0 ms-2">
+            <section class="col-12 col-md col-l col-xl mb-2 bg-primary bg-opacity-25 rounded-2 p-0 ms-2">
                 <div class="fs-6 text-center bg-primary bg-opacity-50 shadow text-white p-2 ">Item Details</div>
                 <div class="row p-4">
                     <div class="col mb-3">
@@ -93,7 +97,7 @@
                     </div>
                 </div>
             </section>
-            <section class="col bg-light rounded-2 p-0 ms-2">
+            <section class="col-12 col-md-12 col-l col-xl mb-2 bg-light rounded-2 p-0 ms-2">
                 <div class="fs-6 text-center text-white bg-info bg-opacity-50 shadow p-2 ">Payment</div>
                 <div class="row p-4">
                     <div class="col mb-3 fs-2 text-center">
@@ -126,14 +130,14 @@
         </section>
         <!--<section class="bg-white shadow rounded-2 mb-3 me-3 ms-4 mt-4 p-3 fs-1 text-center text-primary"></section>-->
         <section class="container-fluid p-3 ">
-            <table class="table table-hover">
+            <table class="table table-sm table-hover">
                 <thead class="bg-danger bg-opacity-50">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">ItemCode</th>
+                    <th scope="col">Code</th>
                     <th scope="col">Name</th>
                     <th scope="col">Price</th>
-                    <th scope="col">Purchase quantity</th>
+                    <th scope="col">Qty</th>
                     <th scope="col">Total(LKR)</th>
                 </tr>
                 </thead>
@@ -185,16 +189,15 @@
                         <label for="txtSearch" class="form-label text-secondary"><i class="fas fa-search p-2"></i>Search Order</label>
                         <input type="text" class="form-control" id="txtSearch" placeholder="Enter Order ID">
                     </div>
-                    <table class="table table-hover">
+                    <table class="table table-sm table-hover">
                         <thead class="bg-success bg-opacity-50">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Order ID</th>
-                            <th scope="col">Item Code</th>
-                            <th scope="col">Customer Id</th>
-                            <th scope="col">Order qty</th>
+                            <th scope="col">OID</th>
+                            <th scope="col">Cust.Id</th>
+                            <th scope="col">P.Qty</th>
                             <th scope="col">cost</th>
-                            <th scope="col">Order Date</th>
+                            <th scope="col">Date</th>
                             <th scope="col">Edit</th>
                         </tr>
                         </thead>
@@ -202,28 +205,26 @@
                         <tr class="bg-success bg-opacity-10">
                             <th scope="row">1</th>
                             <td>O-001</td>
-                            <td>Item1</td>
                             <td>C001</td>
                             <td>5</td>
                             <td>500</td>
                             <td>1/23/2022</td>
                             <td>
-                                <button class="btn btn-warning"><i class="fas fa-edit p-2"></i>Update</button>
-                                <button class="btn btn-danger"><i class="fas fa-trash-alt p-2"></i>Delete</button>
+                                <button class="btn p-1 btn-warning"><i class="fas fa-edit"></i></button>
+                                <button class="btn p-1 btn-danger"><i class="fas fa-trash-alt"></i></button>
                             </td>
                         </tr>
 
                         <tr class="bg-success bg-opacity-10">
                             <th scope="row">1</th>
                             <td>O-001</td>
-                            <td>Item1</td>
                             <td>C001</td>
                             <td>5</td>
                             <td>500</td>
                             <td>1/23/2022</td>
                             <td>
-                                <button class="btn btn-warning"><i class="fas fa-edit p-2"></i>Update</button>
-                                <button class="btn btn-danger"><i class="fas fa-trash-alt p-2"></i>Delete</button>
+                                <button class="btn p-1 btn-warning"><i class="fas fa-edit"></i></button>
+                                <button class="btn p-1 btn-danger"><i class="fas fa-trash-alt"></i></button>
                             </td>
                         </tr>
 
