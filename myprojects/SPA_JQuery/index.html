@@ -541,6 +541,7 @@
     /*customer form key events ends*/
     /*Customer ends*/
 
+    /*Item starts*/
     /*Save Item*/
     $("#btnSaveItem").click(function () {
         /*$("#tblItem").append(
@@ -578,6 +579,31 @@
             $("#quantity").val(itemQty);
         });
     });
+
+    $("#itemCode").keydown(function (event) {
+        if (event.key=="Enter"){
+            $("#newItemName").focus();
+        }
+    });
+
+    $("#newItemName").keydown(function (event) {
+        if (event.key=="Enter"){
+            $("#price").focus();
+        }
+    });
+
+    $("#price").keydown(function (event) {
+        if (event.key=="Enter"){
+            $("#quantity").focus();
+        }
+    });
+
+    $("#quantity").keydown(function (event) {
+        if (event.key=="Enter"){
+            $("#btnSaveItem").focus();
+        }
+    });
+    /*Item ends*/
 
     /*Add Item*/
     let total = 0;
