@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Events</title>
+    <style>
+        div {
+            background: skyblue;
+            height: 750px;
+        }
+
+        h1{
+            position: absolute;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/style/normalize.css">
+</head>
+<body>
+<h1>Hello IJSE...!</h1>
+<div>
+
+</div>
+
+
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+
+    $("div").mouseup(function (event) {
+        var x = event.clientX;
+        var y = event.clientY;
+
+        $("h1").css('top',y);
+        $("h1").css('left',x);
+    });
+
+    $("div").mousedown(function (event) {
+        /* console.log("Mouse Down");*/
+        var x = event.clientX;
+        var y = event.clientY;
+
+        $("h1").css('top',y);
+        $("h1").css('left',x);
+    });
+
+    $("div").mousemove(function (event) {
+       /* console.log("Mouse Move");*/
+       var x = event.clientX;
+       var y = event.clientY;
+
+       $("h1").css('top',y);
+       $("h1").css('left',x);
+    });
+</script>
+</body>
+</html>
