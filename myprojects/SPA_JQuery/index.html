@@ -283,28 +283,6 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <!--<tr class="bg-success bg-opacity-10">
-                            <td>O-001</td>
-                            <td>C001</td>
-                            <td>500</td>
-                            <td>1/23/2022</td>
-                            <td>
-                                <button class="btn p-1 btn-warning"><i class="fas fa-edit"></i></button>
-                                <button class="btn p-1 btn-danger"><i class="fas fa-trash-alt"></i></button>
-                            </td>
-                        </tr>
-
-                        <tr class="bg-success bg-opacity-10">
-                            <td>O-001</td>
-                            <td>C001</td>
-                            <td>500</td>
-                            <td>1/23/2022</td>
-                            <td>
-                                <button class="btn p-1 btn-warning"><i class="fas fa-edit"></i></button>
-                                <button class="btn p-1 btn-danger"><i class="fas fa-trash-alt"></i></button>
-                            </td>
-                        </tr>-->
-
                         </tbody>
                     </table>
                 </div>
@@ -498,6 +476,7 @@
         $(".home").css('display', 'none');
     });
 
+    /*Customer starts*/
     /*Save Customer*/
     $("#btnSaveCustomer").click(function () {
        /* $("#tblCust>tbody").append("<tr>" +
@@ -506,6 +485,8 @@
             "<td>" +$("#newCustAddress").val()+ "</td>" +
             "<td>" +$("#newCustSalary").val()+ "</td>" +
         "</tr>");*/
+
+        $("#tblCust>tbody>tr").off("click");
 
         let cusId= $("#cid").val();
         let cusName = $("#newCustName").val();
@@ -523,12 +504,42 @@
             let cusAddress = $(this).children(":nth-child(3)").text();
             let cusSalary = $(this).children(":nth-child(4)").text();
 
+            console.log(cusId ,cusName ,cusAddress ,cusSalary);
+
             $("#cid").val(cusId);
             $("#newCustName").val(cusName);
             $("#newCustAddress").val(cusAddress);
             $("#newCustSalary").val(cusSalary);
         });
     });
+
+    /*customer form key events starts*/
+    $("#cid").keydown(function (event) {
+        if (event.key=="Enter"){
+            $("#newCustName").focus();
+        }
+    });
+
+    $("#newCustName").keydown(function (event) {
+        if (event.key=="Enter"){
+            $("#newCustAddress").focus();
+        }
+    });
+
+
+    $("#newCustAddress").keydown(function (event) {
+        if (event.key=="Enter"){
+            $("#newCustSalary").focus();
+        }
+    });
+
+    $("#newCustSalary").keydown(function (event) {
+        if (event.key=="Enter"){
+            $("#btnSaveCustomer").focus();
+        }
+    });
+    /*customer form key events ends*/
+    /*Customer ends*/
 
     /*Save Item*/
     $("#btnSaveItem").click(function () {
@@ -540,6 +551,8 @@
                 "<td>"+$("#quantity").val()+"</td>"+
             +"</tr>"
         );*/
+
+        $("#tblItem>tbody>tr").off("click");
 
         let itemCode = $("#itemCode").val();
         let itemName = $("#newItemName").val();
@@ -556,6 +569,8 @@
             let itemName = $(this).children(":nth-child(2)").text();
             let itemPrice = $(this).children(":nth-child(3)").text();
             let itemQty = $(this).children(":nth-child(4)").text();
+
+            console.log(itemCode ,itemName ,itemPrice ,itemQty);
 
             $("#itemCode").val(itemCode);
             $("#newItemName").val(itemName);
