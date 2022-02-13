@@ -541,7 +541,7 @@
             let response = confirm("Are you sure you want to delete this customer?");
             if (response){
                 $(this).remove();
-                clearForm();
+                clearCusForm();
             }else {
 
             }
@@ -619,10 +619,10 @@
     });
 
     $("#btnClearCus").click(function () {
-        clearForm();
+        clearCusForm();
     });
 
-    function clearForm(){
+    function clearCusForm(){
         $("#cid").val("");
         $("#newCustName").val("");
         $("#newCustAddress").val("");
@@ -676,7 +676,40 @@
             });
             /*Item Update ends*/
         });
+
+        /*Item Delete starts*/
+        $("#tblItem>tbody>tr").dblclick(function () {
+            let itemCode = $(this).children(":nth-child(1)").text();
+            let itemName = $(this).children(":nth-child(2)").text();
+            let itemPrice = $(this).children(":nth-child(3)").text();
+            let itemQty = $(this).children(":nth-child(4)").text();
+
+            $("#itemCode").val(itemCode);
+            $("#newItemName").val(itemName);
+            $("#price").val(itemPrice);
+            $("#quantity").val(itemQty);
+
+            let response = confirm("Are you sure you want to delete this Item?");
+            if (response){
+                clearItemForm();
+                $(this).remove();
+            }else {
+
+            }
+        });
+        /*Item Delete ends*/
     });
+
+    $("#btnClearItemForm").click(function () {
+        clearItemForm();
+    });
+
+    function clearItemForm(){
+        $("#itemCode").val("");
+        $("#newItemName").val("");
+        $("#price").val("");
+        $("#quantity").val("");
+    }
 
     $("#itemCode").keydown(function (event) {
         if (event.key=="Enter"){
