@@ -343,7 +343,7 @@
                     </div>
                     <div class="d-flex justify-content-center p-3">
                         <button class="btn btn-success me-3 ps-4 pe-4" id="btnSaveCustomer" type="button">Save</button>
-                        <button class="btn btn-warning" type="button">Update</button>
+                        <button id="btnUpdate" class="btn btn-warning" type="button">Update</button>
                     </div>
                 </form>
 
@@ -479,13 +479,6 @@
     /*Customer starts*/
     /*Save Customer*/
     $("#btnSaveCustomer").click(function () {
-       /* $("#tblCust>tbody").append("<tr>" +
-            "<td>" +$("#cid").val()+ "</td>" +
-            "<td>" +$("#newCustName").val()+ "</td>" +
-            "<td>" +$("#newCustAddress").val()+ "</td>" +
-            "<td>" +$("#newCustSalary").val()+ "</td>" +
-        "</tr>");*/
-
         $("#tblCust>tbody>tr").off("click");
 
         let cusId= $("#cid").val();
@@ -499,6 +492,8 @@
 
         /*get Customer to Form*/
         $("#tblCust>tbody>tr").click(function () {
+            $("#btnUpdate").off();
+            let selectedRow =$(this);
             let cusId = $(this).children(":nth-child(1)").text();
             let cusName = $(this).children(":nth-child(2)").text();
             let cusAddress = $(this).children(":nth-child(3)").text();
@@ -510,6 +505,21 @@
             $("#newCustName").val(cusName);
             $("#newCustAddress").val(cusAddress);
             $("#newCustSalary").val(cusSalary);
+
+            /*Customer update Starts*/
+            $("#btnUpdate").on('click',function () {
+                let cusId= $("#cid").val();
+                let cusName = $("#newCustName").val();
+                let cusAddress = $("#newCustAddress").val();
+                let cusSalary = $("#newCustSalary").val();
+
+                console.log(selectedRow.children().text());
+                selectedRow.children(":nth-child(1)").text(cusId);
+                selectedRow.children(":nth-child(2)").text(cusName);
+                selectedRow.children(":nth-child(3)").text(cusAddress);
+                selectedRow.children(":nth-child(4)").text(cusSalary);
+            });
+            /*Customer update Ends*/
         });
     });
 
@@ -544,15 +554,6 @@
     /*Item starts*/
     /*Save Item*/
     $("#btnSaveItem").click(function () {
-        /*$("#tblItem").append(
-            "<tr>"+
-                "<td>"+$("#itemCode").val()+"</td>"+
-                "<td>"+$("#newItemName").val()+"</td>"+
-                "<td>"+$("#price").val()+"</td>"+
-                "<td>"+$("#quantity").val()+"</td>"+
-            +"</tr>"
-        );*/
-
         $("#tblItem>tbody>tr").off("click");
 
         let itemCode = $("#itemCode").val();
