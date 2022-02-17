@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 01-Js Que</title>
+    <style>
+        body {
+            background-color: #3f4e58;
+        }
+
+
+        #section1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #section1 > section {
+            /* border: 2px solid red;*/
+            height: 50px;
+            flex-basis: 150px;
+            position: relative;
+            top: 35vh;
+            margin-right: 20px;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .outBox{
+            /*border: 2px solid red;*/
+            height: 50px;
+            width: 150px;
+            position: relative;
+        }
+
+        #yellowBox{
+            top: 30vh;
+            left: 10%;
+            background-color: yellow;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        #pinkBox{
+            left: 84%;
+            top: 40vh;
+            background-color: orchid;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        body>div:nth-child(2){
+            height: 2px;
+            width: 84%;
+            left: 9%;
+            top: 241px;
+            position: relative;
+            background-color: white;
+        }
+
+        body>div:nth-child(4){
+            height: 2px;
+            width: 84%;
+            left: 9%;
+            top: 379px;
+            position: absolute;
+            background-color: white;
+        }
+
+        #section1 > section:nth-child(1) {
+            background-color: red;
+        }
+
+        #section1 > section:nth-child(2) {
+            background-color: skyblue;
+        }
+
+        #section1 > section:nth-child(3) {
+            background-color: yellowgreen;
+        }
+
+        #section1 > section:nth-child(4) {
+            background-color: purple;
+        }
+
+    </style>
+</head>
+<body>
+<section id="yellowBox" class="outBox"></section>
+<div></div>
+<section id="section1">
+    <section id="redBox"></section>
+    <section id="blueBox"></section>
+    <section id="greenBox"></section>
+    <section id="purBox"></section>
+</section>
+<div></div>
+<section id="pinkBox" class="outBox"></section>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    var colors = ["yellow","red", "skyblue", "yellowgreen", "purple","orchid"];
+
+    setInterval(shiftColors, 500);
+
+    function shiftColors() {
+        var c = colors[0];
+        colors.shift();
+        colors.push(c);
+        $("#yellowBox").css('background-color', colors[5]);
+        $("#redBox").css('background-color', colors[4]);
+        $("#blueBox").css('background-color', colors[3]);
+        $("#greenBox").css('background-color', colors[2]);
+        $("#purBox").css('background-color', colors[1]);
+        $("#pinkBox").css('background-color', colors[0]);
+    }
+
+</script>
+</body>
+</html>
