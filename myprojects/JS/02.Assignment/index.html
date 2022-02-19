@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>KITT</title>
     <style>
+        body{
+            background-color: #1d1212;
+        }
+
         #section1{
             display: flex;
             align-items: center;
@@ -11,7 +15,6 @@
         }
 
         #section1>section{
-            border:1px solid black;
             height: 50px;
             flex-basis: 150px;
             position: relative;
@@ -36,7 +39,7 @@
         }
 
         #btnStart{
-            background-color: slategray;
+            background-color: royalblue;
             border: 3px solid darkgray;
         }
 
@@ -61,61 +64,46 @@
     <button id="btnStop">Stop</button>
         <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
         <script>
-            var colors = ["red","firebrick","rosybrown","wheat","antiquewhite","lightgrey","white"];
-
-            let count1 = 1;
-            let count2 = 1;
-
+            var colors = ["red","firebrick","rosybrown","wheat","antiquewhite","white"];
+            let x=0;
+            let y=0;
             let interval1;
-            let interval2;
+
             $("#btnStart").click(function () {
                 clearInterval(interval1);
-                //clearInterval(interval2);
-                interval1=setInterval(colorsIn,100);
+                interval1=setInterval(colorsInOut,100);
             });
 
             $("#btnStop").click(function () {
                 clearInterval(interval1);
-                clearInterval(interval2);
             });
 
-            //setInterval(colorsOut,500);
-
-            function colorsIn() {
-                for (var x=0; x<=count1; x++){
+            function colorsInOut() {
+                if (x<colors.length*2){
                     $("#b6").css('background-color',colors[x]);
                     $("#b5").css('background-color',colors[x-1]);
                     $("#b4").css('background-color',colors[x-2]);
                     $("#b3").css('background-color',colors[x-3]);
                     $("#b2").css('background-color',colors[x-4]);
                     $("#b1").css('background-color',colors[x-5]);
+                    x++;
+                    y=0;
                 }
-                count1++;
 
-                if (count1==12){
-                    clearInterval(interval1);
-                    clearInterval(interval2);
-                    count2=0;
-                    interval1=setInterval(colorsOut,100);
-                }
-            }
+                if (x==colors.length*2){
+                    if (y<colors.length*2){
+                        $("#b6").css('background-color',colors[y-5]);
+                        $("#b5").css('background-color',colors[y-4]);
+                        $("#b4").css('background-color',colors[y-3]);
+                        $("#b3").css('background-color',colors[y-2]);
+                        $("#b2").css('background-color',colors[y-1]);
+                        $("#b1").css('background-color',colors[y]);
+                        y++;
 
-            function colorsOut() {
-                for (var y=0; y<=count2; y++){
-                    $("#b6").css('background-color',colors[y-5]);
-                    $("#b5").css('background-color',colors[y-4]);
-                    $("#b4").css('background-color',colors[y-3]);
-                    $("#b3").css('background-color',colors[y-2]);
-                    $("#b2").css('background-color',colors[y-1]);
-                    $("#b1").css('background-color',colors[y]);
-                }
-                count2++;
-
-                if(count2==12){
-                    clearInterval(interval2);
-                    clearInterval(interval1);
-                    count1=0;
-                    interval2=setInterval(colorsIn,100);
+                        if (y==colors.length*2){
+                            x=0;
+                        }
+                    }
                 }
             }
         </script>
