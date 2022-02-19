@@ -21,7 +21,7 @@
             background-color: white;
             top: 300px;
             border-radius: 5px 5px 5px 5px;
-            margin-right: 5px;
+            margin-right: 3px;
         }
 
         button{
@@ -59,19 +59,20 @@
         <section id="b4"></section>
         <section id="b5"></section>
         <section id="b6"></section>
+        <section id="b7"></section>
     </section>
     <button id="btnStart">Start</button>
     <button id="btnStop">Stop</button>
         <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
         <script>
-            var colors = ["red","firebrick","rosybrown","wheat","antiquewhite","white"];
+            var colors = ["#FFFFFF","#880000","#A80000","#FF0000","#A80000","#880000","#FFFFFF"];
             let x=0;
             let y=0;
             let interval1;
 
             $("#btnStart").click(function () {
                 clearInterval(interval1);
-                interval1=setInterval(colorsInOut,100);
+                interval1=setInterval(colorsInOut,50);
             });
 
             $("#btnStop").click(function () {
@@ -80,18 +81,20 @@
 
             function colorsInOut() {
                 if (x<colors.length*2){
-                    $("#b6").css('background-color',colors[x]);
-                    $("#b5").css('background-color',colors[x-1]);
-                    $("#b4").css('background-color',colors[x-2]);
-                    $("#b3").css('background-color',colors[x-3]);
-                    $("#b2").css('background-color',colors[x-4]);
-                    $("#b1").css('background-color',colors[x-5]);
+                    $("#b7").css('background-color',colors[x]);
+                    $("#b6").css('background-color',colors[x-1]);
+                    $("#b5").css('background-color',colors[x-2]);
+                    $("#b4").css('background-color',colors[x-3]);
+                    $("#b3").css('background-color',colors[x-4]);
+                    $("#b2").css('background-color',colors[x-5]);
+                    $("#b1").css('background-color',colors[x-6]);
                     x++;
                     y=0;
                 }
 
                 if (x==colors.length*2){
                     if (y<colors.length*2){
+                        $("#b7").css('background-color',colors[y-6]);
                         $("#b6").css('background-color',colors[y-5]);
                         $("#b5").css('background-color',colors[y-4]);
                         $("#b4").css('background-color',colors[y-3]);
