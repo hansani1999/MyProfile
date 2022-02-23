@@ -495,14 +495,29 @@
         let cusAddress = $("#newCustAddress").val();
         let cusSalary = $("#newCustSalary").val();
 
-        let row = `<tr><td>${cusId}</td><td>${cusName}</td><td>${cusAddress}</td><td>${cusSalary}</td></tr>`;
+        var customerDTO = new CustomerDTO(cusId,cusName,cusAddress,cusSalary);
+
+        let response = confirm("Are you sure you want to Add this Customer?");
+        if (response){
+            saveCustomer(customerDTO);
+            clearCusForm();
+            clearAll();
+            loadAllCustomers();
+        }
+
+
+        /*for (var i of customerDB){
+            console.log(i.getCustomerId(),i.getCustomerName());
+        }*/
+
+        /*let row = `<tr><td>${cusId}</td><td>${cusName}</td><td>${cusAddress}</td><td>${cusSalary}</td></tr>`;
         let response = confirm("Are you sure you want to Add this Customer?");
         if (response){
             $("#tblCust").append(row);
             clearCusForm();
         }else {
 
-        }
+        }*/
 
         /*get Customer to Form*/
         $("#tblCust>tbody>tr").click(function () {
@@ -836,5 +851,8 @@
     });
 
 </script>
+<script src="db/DB.js"></script>
+<script src="controller/CustomerController.js"></script>
+<script src="model/Customer.js"></script>
 </body>
 </html>
