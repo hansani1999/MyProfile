@@ -1,14 +1,14 @@
 
 function CustomerDTO(id,name,address,salary) {
-    var _id=id;
-    var _name =name;
+    var _id = id;
+    var _name = name;
     var _address = address;
     var _salary = salary;
 
     this.setCustomerId = function (cid) {
         _id=cid;
     }
-    this.seCustomerName = function (cusName) {
+    this.setCustomerName = function (cusName) {
         _name = cusName;
     }
     this.setAddress = function (cusAddress) {

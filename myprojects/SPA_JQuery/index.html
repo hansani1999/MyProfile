@@ -501,10 +501,10 @@
         if (response){
             saveCustomer(customerDTO);
             clearCusForm();
-            clearAll();
+            clearTable();
             loadAllCustomers();
+            bindTableEvents();
         }
-
 
         /*for (var i of customerDB){
             console.log(i.getCustomerId(),i.getCustomerName());
@@ -519,46 +519,55 @@
 
         }*/
 
-        /*get Customer to Form*/
+        /*/!*get Customer to Form*!/
         $("#tblCust>tbody>tr").click(function () {
-            $("#btnUpdate").off();
+            //$("#btnUpdate").off();
             let selectedRow =$(this);
             let cusId = $(this).children(":nth-child(1)").text();
             let cusName = $(this).children(":nth-child(2)").text();
             let cusAddress = $(this).children(":nth-child(3)").text();
             let cusSalary = $(this).children(":nth-child(4)").text();
 
-            console.log(cusId ,cusName ,cusAddress ,cusSalary);
+            //console.log(cusId ,cusName ,cusAddress ,cusSalary);
 
             $("#cid").val(cusId);
             $("#newCustName").val(cusName);
             $("#newCustAddress").val(cusAddress);
             $("#newCustSalary").val(cusSalary);
 
-            /*Customer update Starts*/
-            $("#btnUpdate").on('click',function () {
+            /!*Customer update Starts*!/
+            /!*$("#btnUpdate").on('click',function () {
                 let cusId= $("#cid").val();
                 let cusName = $("#newCustName").val();
                 let cusAddress = $("#newCustAddress").val();
                 let cusSalary = $("#newCustSalary").val();
 
+                var updatedCustomerDTO = new CustomerDTO(cusId,cusName,cusAddress,cusSalary);
                 let response = confirm("Are you sure you want to Update this Customer?");
+
                 if (response){
-                    selectedRow.children(":nth-child(1)").text(cusId);
-                    selectedRow.children(":nth-child(2)").text(cusName);
-                    selectedRow.children(":nth-child(3)").text(cusAddress);
-                    selectedRow.children(":nth-child(4)").text(cusSalary);
+                    updateCustomer(updatedCustomerDTO);
                     clearCusForm();
-                }else {
-
+                    clearTable();
+                    loadAllCustomers();
                 }
+                 /!*if (response){
+                     selectedRow.children(":nth-child(1)").text(cusId);
+                     selectedRow.children(":nth-child(2)").text(cusName);
+                     selectedRow.children(":nth-child(3)").text(cusAddress);
+                     selectedRow.children(":nth-child(4)").text(cusSalary);
+                     clearCusForm();
+                 }else {
 
-            });
-            /*Customer update Ends*/
+                 }*!/
+
+            });*!/
+            /!*Customer update Ends*!/
         });
 
-        /*Customer Delete Starts*/
+        /!*Customer Delete Starts*!/
         $("#tblCust>tbody>tr").dblclick(function () {
+            var selctedRow = $(this);
             let cusId = $(this).children(":nth-child(1)").text();
             let cusName = $(this).children(":nth-child(2)").text();
             let cusAddress = $(this).children(":nth-child(3)").text();
@@ -568,16 +577,57 @@
             $("#newCustName").val(cusName);
             $("#newCustAddress").val(cusAddress);
             $("#newCustSalary").val(cusSalary);
+
             let response = confirm("Are you sure you want to Delete this customer?");
             if (response){
+                deleteCustomer(cusId);
                 $(this).remove();
+                //clearTable();
                 clearCusForm();
+                //loadAllCustomers();
             }else {
 
             }
-        });
+        });*/
         /*Customer Delete Ends*/
     });
+
+
+
+    /*Customer update Starts*/
+    /*$("#btnUpdate").on('click',function () {
+        //$("#btnUpdate").off();
+        let cusId= $("#cid").val();
+        let cusName = $("#newCustName").val();
+        let cusAddress = $("#newCustAddress").val();
+        let cusSalary = $("#newCustSalary").val();
+
+        var updatedCustomerDTO = new CustomerDTO(cusId,cusName,cusAddress,cusSalary);
+        var response = confirm("Are you sure you want to Update this Customer?");
+
+        if (response){
+            updateCustomer(updatedCustomerDTO);
+            clearCusForm();
+            clearTable();
+            loadAllCustomers();
+            $("#tblCust>tbody>tr").click(function () {
+                //$("#btnUpdate").off();
+                let selectedRow =$(this);
+                let cusId = $(this).children(":nth-child(1)").text();
+                let cusName = $(this).children(":nth-child(2)").text();
+                let cusAddress = $(this).children(":nth-child(3)").text();
+                let cusSalary = $(this).children(":nth-child(4)").text();
+
+                //console.log(cusId ,cusName ,cusAddress ,cusSalary);
+
+                $("#cid").val(cusId);
+                $("#newCustName").val(cusName);
+                $("#newCustAddress").val(cusAddress);
+                $("#newCustSalary").val(cusSalary);
+            });
+        }
+    });*/
+    /*Customer update Ends*/
 
     /*customer form key events starts*/
     var regCusId = /^(C00-)[0-9]{3,4}$/;
@@ -648,16 +698,69 @@
         }
     });
 
+    $("#btnUpdate").on('click',function () {
+        //$("#btnUpdate").off();
+        let cusId= $("#cid").val();
+        let cusName = $("#newCustName").val();
+        let cusAddress = $("#newCustAddress").val();
+        let cusSalary = $("#newCustSalary").val();
+
+        var updatedCustomerDTO = new CustomerDTO(cusId,cusName,cusAddress,cusSalary);
+        var response = confirm("Are you sure you want to Update this Customer?");
+
+        if (response){
+            updateCustomer(updatedCustomerDTO);
+            clearCusForm();
+            clearTable();
+            loadAllCustomers();
+            bindTableEvents();
+            /*$("#tblCust>tbody>tr").click(function () {
+                //$("#btnUpdate").off();
+                let selectedRow =$(this);
+                let cusId = $(this).children(":nth-child(1)").text();
+                let cusName = $(this).children(":nth-child(2)").text();
+                let cusAddress = $(this).children(":nth-child(3)").text();
+                let cusSalary = $(this).children(":nth-child(4)").text();
+
+                //console.log(cusId ,cusName ,cusAddress ,cusSalary);
+
+                $("#cid").val(cusId);
+                $("#newCustName").val(cusName);
+                $("#newCustAddress").val(cusAddress);
+                $("#newCustSalary").val(cusSalary);
+            });
+
+            $("#tblCust>tbody>tr").dblclick(function () {
+                var selctedRow = $(this);
+                let cusId = $(this).children(":nth-child(1)").text();
+                let cusName = $(this).children(":nth-child(2)").text();
+                let cusAddress = $(this).children(":nth-child(3)").text();
+                let cusSalary = $(this).children(":nth-child(4)").text();
+
+                $("#cid").val(cusId);
+                $("#newCustName").val(cusName);
+                $("#newCustAddress").val(cusAddress);
+                $("#newCustSalary").val(cusSalary);
+
+                let response = confirm("Are you sure you want to Delete this customer?");
+                if (response){
+                    deleteCustomer(cusId);
+                    $(this).remove();
+                    //clearTable();
+                    clearCusForm();
+                    //loadAllCustomers();
+                }else {
+
+                }
+            });*/
+        }
+    });
+
+
     $("#btnClearCus").click(function () {
         clearCusForm();
     });
 
-    function clearCusForm(){
-        $("#cid").val("");
-        $("#newCustName").val("");
-        $("#newCustAddress").val("");
-        $("#newCustSalary").val("");
-    }
 
 
     /*customer form key events ends*/
@@ -706,6 +809,7 @@
                 let quantity = $("#quantity").val();
 
                 let response = confirm("Are you sure you want to update this Item?");
+
                 if (response){
                     selectedRow.children(":nth-child(1)").text(itemCode);
                     selectedRow.children(":nth-child(2)").text(itemName);
@@ -744,6 +848,8 @@
     $("#btnClearItemForm").click(function () {
         clearItemForm();
     });
+
+
 
     function clearItemForm(){
         $("#itemCode").val("");
