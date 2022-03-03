@@ -224,36 +224,7 @@
                         <th scope="col">Total(LKR)</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <!--<tr class="bg-danger bg-opacity-10">
-                        <td>I-001</td>
-                        <td>Item1</td>
-                        <td>100.00</td>
-                        <td>5</td>
-                        <td>500.00</td>
-                    </tr>
-                    <tr class="bg-danger bg-opacity-10">
-                        <td>I-001</td>
-                        <td>Item1</td>
-                        <td>100.00</td>
-                        <td>5</td>
-                        <td>500.00</td>
-                    </tr>
-                    <tr class="bg-danger bg-opacity-10">
-                        <td>I-001</td>
-                        <td>Item1</td>
-                        <td>100.00</td>
-                        <td>5</td>
-                        <td>500.00</td>
-                    </tr>
-                    <tr class="bg-danger bg-opacity-10">
-                        <td>I-001</td>
-                        <td>Item1</td>
-                        <td>100.00</td>
-                        <td>5</td>
-                        <td>500.00</td>
-                    </tr>-->
-                    </tbody>
+                    <tbody></tbody>
                 </table>
             </section>
         </section>
@@ -301,10 +272,10 @@
                 <div class="mt-5 row p-2">
                     <div class="col-12">
                         <!--<label for="inputCity" class="form-label"></label>-->
-                        <input class="form-control" id="city" placeholder="Enter Customer ID eg: C001" type="text">
+                        <input class="form-control" id="txtSearchCust" placeholder="Enter Customer ID eg: C001" type="text">
                     </div>
                     <div class="col-3 mt-3">
-                        <button class="btn btn-primary" type="submit">Search</button>
+                        <button id="btnSearchCust" class="btn btn-primary" type="submit">Search</button>
                     </div>
                     <div class="col-9 mt-3">
                         <select class="form-select" id="satate">
@@ -505,97 +476,10 @@
             loadAllCustomers();
             bindTableEvents();
         }
-
-        /*for (var i of customerDB){
-            console.log(i.getCustomerId(),i.getCustomerName());
-        }*/
-
-        /*let row = `<tr><td>${cusId}</td><td>${cusName}</td><td>${cusAddress}</td><td>${cusSalary}</td></tr>`;
-        let response = confirm("Are you sure you want to Add this Customer?");
-        if (response){
-            $("#tblCust").append(row);
-            clearCusForm();
-        }else {
-
-        }*/
-
-        /*/!*get Customer to Form*!/
-        $("#tblCust>tbody>tr").click(function () {
-            //$("#btnUpdate").off();
-            let selectedRow =$(this);
-            let cusId = $(this).children(":nth-child(1)").text();
-            let cusName = $(this).children(":nth-child(2)").text();
-            let cusAddress = $(this).children(":nth-child(3)").text();
-            let cusSalary = $(this).children(":nth-child(4)").text();
-
-            //console.log(cusId ,cusName ,cusAddress ,cusSalary);
-
-            $("#cid").val(cusId);
-            $("#newCustName").val(cusName);
-            $("#newCustAddress").val(cusAddress);
-            $("#newCustSalary").val(cusSalary);
-
-            /!*Customer update Starts*!/
-            /!*$("#btnUpdate").on('click',function () {
-                let cusId= $("#cid").val();
-                let cusName = $("#newCustName").val();
-                let cusAddress = $("#newCustAddress").val();
-                let cusSalary = $("#newCustSalary").val();
-
-                var updatedCustomerDTO = new CustomerDTO(cusId,cusName,cusAddress,cusSalary);
-                let response = confirm("Are you sure you want to Update this Customer?");
-
-                if (response){
-                    updateCustomer(updatedCustomerDTO);
-                    clearCusForm();
-                    clearTable();
-                    loadAllCustomers();
-                }
-                 /!*if (response){
-                     selectedRow.children(":nth-child(1)").text(cusId);
-                     selectedRow.children(":nth-child(2)").text(cusName);
-                     selectedRow.children(":nth-child(3)").text(cusAddress);
-                     selectedRow.children(":nth-child(4)").text(cusSalary);
-                     clearCusForm();
-                 }else {
-
-                 }*!/
-
-            });*!/
-            /!*Customer update Ends*!/
-        });
-
-        /!*Customer Delete Starts*!/
-        $("#tblCust>tbody>tr").dblclick(function () {
-            var selctedRow = $(this);
-            let cusId = $(this).children(":nth-child(1)").text();
-            let cusName = $(this).children(":nth-child(2)").text();
-            let cusAddress = $(this).children(":nth-child(3)").text();
-            let cusSalary = $(this).children(":nth-child(4)").text();
-
-            $("#cid").val(cusId);
-            $("#newCustName").val(cusName);
-            $("#newCustAddress").val(cusAddress);
-            $("#newCustSalary").val(cusSalary);
-
-            let response = confirm("Are you sure you want to Delete this customer?");
-            if (response){
-                deleteCustomer(cusId);
-                $(this).remove();
-                //clearTable();
-                clearCusForm();
-                //loadAllCustomers();
-            }else {
-
-            }
-        });*/
-        /*Customer Delete Ends*/
     });
 
-
-
-    /*Customer update Starts*/
-    /*$("#btnUpdate").on('click',function () {
+    /*Customer Update Starts*/
+    $("#btnUpdate").on('click',function () {
         //$("#btnUpdate").off();
         let cusId= $("#cid").val();
         let cusName = $("#newCustName").val();
@@ -610,24 +494,32 @@
             clearCusForm();
             clearTable();
             loadAllCustomers();
-            $("#tblCust>tbody>tr").click(function () {
-                //$("#btnUpdate").off();
-                let selectedRow =$(this);
-                let cusId = $(this).children(":nth-child(1)").text();
-                let cusName = $(this).children(":nth-child(2)").text();
-                let cusAddress = $(this).children(":nth-child(3)").text();
-                let cusSalary = $(this).children(":nth-child(4)").text();
-
-                //console.log(cusId ,cusName ,cusAddress ,cusSalary);
-
-                $("#cid").val(cusId);
-                $("#newCustName").val(cusName);
-                $("#newCustAddress").val(cusAddress);
-                $("#newCustSalary").val(cusSalary);
-            });
+            bindTableEvents();
         }
-    });*/
-    /*Customer update Ends*/
+    });
+    /*Customer Update Ends*/
+
+
+    /*Customer Search Starts*/
+    $("#btnSearchCust").click(function () {
+        var searchId = $("#txtSearchCust").val();
+
+        var response = searchCustomer(searchId);
+
+        if (response){
+            $("#cid").val(response.getCustomerId());
+            $("#newCustName").val(response.getCustomerName());
+            $("#newCustAddress").val(response.getAddress());
+            $("#newCustSalary").val(response.getSalary());
+        }else {
+            alert("Customer Not Found");
+        }
+    });
+    /*Customer Search Ends*/
+
+    $("#btnClearCus").click(function () {
+        clearCusForm();
+    });
 
     /*customer form key events starts*/
     var regCusId = /^(C00-)[0-9]{3,4}$/;
@@ -697,72 +589,6 @@
             $("#btnSaveCustomer").prop('disabled',true);
         }
     });
-
-    $("#btnUpdate").on('click',function () {
-        //$("#btnUpdate").off();
-        let cusId= $("#cid").val();
-        let cusName = $("#newCustName").val();
-        let cusAddress = $("#newCustAddress").val();
-        let cusSalary = $("#newCustSalary").val();
-
-        var updatedCustomerDTO = new CustomerDTO(cusId,cusName,cusAddress,cusSalary);
-        var response = confirm("Are you sure you want to Update this Customer?");
-
-        if (response){
-            updateCustomer(updatedCustomerDTO);
-            clearCusForm();
-            clearTable();
-            loadAllCustomers();
-            bindTableEvents();
-            /*$("#tblCust>tbody>tr").click(function () {
-                //$("#btnUpdate").off();
-                let selectedRow =$(this);
-                let cusId = $(this).children(":nth-child(1)").text();
-                let cusName = $(this).children(":nth-child(2)").text();
-                let cusAddress = $(this).children(":nth-child(3)").text();
-                let cusSalary = $(this).children(":nth-child(4)").text();
-
-                //console.log(cusId ,cusName ,cusAddress ,cusSalary);
-
-                $("#cid").val(cusId);
-                $("#newCustName").val(cusName);
-                $("#newCustAddress").val(cusAddress);
-                $("#newCustSalary").val(cusSalary);
-            });
-
-            $("#tblCust>tbody>tr").dblclick(function () {
-                var selctedRow = $(this);
-                let cusId = $(this).children(":nth-child(1)").text();
-                let cusName = $(this).children(":nth-child(2)").text();
-                let cusAddress = $(this).children(":nth-child(3)").text();
-                let cusSalary = $(this).children(":nth-child(4)").text();
-
-                $("#cid").val(cusId);
-                $("#newCustName").val(cusName);
-                $("#newCustAddress").val(cusAddress);
-                $("#newCustSalary").val(cusSalary);
-
-                let response = confirm("Are you sure you want to Delete this customer?");
-                if (response){
-                    deleteCustomer(cusId);
-                    $(this).remove();
-                    //clearTable();
-                    clearCusForm();
-                    //loadAllCustomers();
-                }else {
-
-                }
-            });*/
-        }
-    });
-
-
-    $("#btnClearCus").click(function () {
-        clearCusForm();
-    });
-
-
-
     /*customer form key events ends*/
     /*Customer ends*/
 
@@ -793,8 +619,6 @@
             let itemName = $(this).children(":nth-child(2)").text();
             let itemPrice = $(this).children(":nth-child(3)").text();
             let itemQty = $(this).children(":nth-child(4)").text();
-
-            /*console.log(itemCode ,itemName ,itemPrice ,itemQty);*/
 
             $("#itemCode").val(itemCode);
             $("#newItemName").val(itemName);
