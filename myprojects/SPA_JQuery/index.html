@@ -351,10 +351,10 @@
                 <div class="mt-5 row p-2">
                     <div class="col-12">
                         <!--<label for="inputCity" class="form-label"></label>-->
-                        <input class="form-control" id="inputCity" placeholder="Enter ID eg: I-001" type="text">
+                        <input class="form-control" id="txtSearchItem" placeholder="Enter ID eg: I00-001" type="text">
                     </div>
                     <div class="col-3 mt-3">
-                        <button class="btn btn-primary" style="width: 100%" type="submit">Search</button>
+                        <button id="btnSearchItem" class="btn btn-primary" style="width: 100%" type="submit">Search</button>
                     </div>
                     <div class="col-9 mt-3">
                         <select class="form-select" id="inputState">
@@ -377,11 +377,11 @@
                 <form>
                     <div class="mb-3">
                         <label class="form-label" for="itemCode">Item Code</label>
-                        <input class="form-control txtItemInput" id="itemCode" placeholder="I-001" type="text">
+                        <input class="form-control txtItemInput" id="itemCode" placeholder="I00-001" type="text">
                         <p><small id="errItemCode" class="text-danger"></small></p>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="newItemName">Name</label>
+                        <label class="form-label" for="newItemName">Description</label>
                         <input class="form-control txtItemInput" id="newItemName" placeholder="Item1" type="text">
                         <p><small id="errItemName" class="text-danger"></small></p>
                     </div>
@@ -595,15 +595,12 @@
     /*Item starts*/
     /*Save Item*/
     $("#btnSaveItem").click(function () {
-        //$("#tblItem>tbody>tr").off("click");
         let itemCode = $("#itemCode").val();
         let description = $("#newItemName").val();
         let itemPrice = $("#price").val();
         let quantity = $("#quantity").val();
 
         var itemDTO = new ItemDTO(itemCode,description,itemPrice,quantity);
-        //let row = `<tr><td>${itemCode}</td><td>${description}</td><td>${itemPrice}</td><td>${quantity}</td></tr>`;
-
         let response = confirm("Are you sure you want to Add this Item?");
 
         if (response){
@@ -612,11 +609,6 @@
             clearItemTable();
             loadAllItems();
             bindItemTableEvents();
-            for (var item of itemDB) {
-                console.log(item.getItemCode(),item.getDescription());
-            }
-
-            //$("#tblItem").append(row);
         }else {
 
         }
@@ -703,9 +695,26 @@
     });
     /*Item Update Ends*/
 
+    /*Item Search Starts*/
+    $("#btnSearchItem").click(function () {
+        let searchCode = $("#txtSearchItem").val();
+        let searchResponse = searchItem(searchCode);
+
+        if (searchResponse){
+            $("#itemCode").val(searchResponse.getItemCode());
+            $("#newItemName").val(searchResponse.getDescription());
+            $("#price").val(searchResponse.getPrice());
+            $("#quantity").val(searchResponse.getQty());
+        }else{
+            alert("No Items match your search");
+        }
+    });
+    /*Item Search Ends*/
+
     $("#btnClearItemForm").click(function () {
         clearItemForm();
     });
+
 
 
     let regItemCode = /^(I00-)[0-9]{3,4}$/;
