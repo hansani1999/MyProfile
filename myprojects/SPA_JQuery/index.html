@@ -595,40 +595,51 @@
     /*Item starts*/
     /*Save Item*/
     $("#btnSaveItem").click(function () {
-        $("#tblItem>tbody>tr").off("click");
+        //$("#tblItem>tbody>tr").off("click");
         let itemCode = $("#itemCode").val();
-        let itemName = $("#newItemName").val();
+        let description = $("#newItemName").val();
         let itemPrice = $("#price").val();
         let quantity = $("#quantity").val();
 
-        let row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemPrice}</td><td>${quantity}</td></tr>`;
+        var itemDTO = new ItemDTO(itemCode,description,itemPrice,quantity);
+        //let row = `<tr><td>${itemCode}</td><td>${description}</td><td>${itemPrice}</td><td>${quantity}</td></tr>`;
 
         let response = confirm("Are you sure you want to Add this Item?");
+
         if (response){
-            $("#tblItem").append(row);
+            saveItem(itemDTO);
+            clearItemForm();
+            clearItemTable();
+            loadAllItems();
+            bindItemTableEvents();
+            for (var item of itemDB) {
+                console.log(item.getItemCode(),item.getDescription());
+            }
+
+            //$("#tblItem").append(row);
         }else {
 
         }
 
 
-        /*Get Item to Form*/
+        /*/!*Get Item to Form*!/
         $("#tblItem>tbody>tr").click(function () {
             $("#btnUpdateItem").off();
             let selectedRow = $(this);
             let itemCode = $(this).children(":nth-child(1)").text();
-            let itemName = $(this).children(":nth-child(2)").text();
+            let description = $(this).children(":nth-child(2)").text();
             let itemPrice = $(this).children(":nth-child(3)").text();
             let itemQty = $(this).children(":nth-child(4)").text();
 
             $("#itemCode").val(itemCode);
-            $("#newItemName").val(itemName);
+            $("#newItemName").val(description);
             $("#price").val(itemPrice);
             $("#quantity").val(itemQty);
 
-            /*Item Update starts*/
+            /!*Item Update starts*!/
             $("#btnUpdateItem").click(function () {
                 let itemCode = $("#itemCode").val();
-                let itemName = $("#newItemName").val();
+                let description = $("#newItemName").val();
                 let itemPrice = $("#price").val();
                 let quantity = $("#quantity").val();
 
@@ -636,25 +647,25 @@
 
                 if (response){
                     selectedRow.children(":nth-child(1)").text(itemCode);
-                    selectedRow.children(":nth-child(2)").text(itemName);
+                    selectedRow.children(":nth-child(2)").text(description);
                     selectedRow.children(":nth-child(3)").text(itemPrice);
                     selectedRow.children(":nth-child(4)").text(quantity);
                 }else {
 
                 }
             });
-            /*Item Update ends*/
+            /!*Item Update ends*!/
         });
 
-        /*Item Delete starts*/
+        /!*Item Delete starts*!/
         $("#tblItem>tbody>tr").dblclick(function () {
             let itemCode = $(this).children(":nth-child(1)").text();
-            let itemName = $(this).children(":nth-child(2)").text();
+            let description = $(this).children(":nth-child(2)").text();
             let itemPrice = $(this).children(":nth-child(3)").text();
             let itemQty = $(this).children(":nth-child(4)").text();
 
             $("#itemCode").val(itemCode);
-            $("#newItemName").val(itemName);
+            $("#newItemName").val(description);
             $("#price").val(itemPrice);
             $("#quantity").val(itemQty);
 
@@ -666,21 +677,36 @@
 
             }
         });
-        /*Item Delete ends*/
+        /!*Item Delete ends*!/*/
     });
+
+    /*Item Update Starts*/
+    $("#btnUpdateItem").click(function () {
+        //alert("update item");
+        let itemCode = $("#itemCode").val();
+        let description = $("#newItemName").val();
+        let itemPrice = $("#price").val();
+        let quantity = $("#quantity").val();
+
+        var updatedItem = new ItemDTO(itemCode,description,itemPrice,quantity);
+        let response = confirm("Are you sure you want to update this Item?");
+
+        if (response){
+           updateItem(updatedItem);
+           clearItemForm();
+           clearItemTable();
+           loadAllItems();
+           bindItemTableEvents();
+        }else {
+
+        }
+    });
+    /*Item Update Ends*/
 
     $("#btnClearItemForm").click(function () {
         clearItemForm();
     });
 
-
-
-    function clearItemForm(){
-        $("#itemCode").val("");
-        $("#newItemName").val("");
-        $("#price").val("");
-        $("#quantity").val("");
-    }
 
     let regItemCode = /^(I00-)[0-9]{3,4}$/;
     let regItemName = /^[A-z ]{3,20}$/;
@@ -746,7 +772,6 @@
             $("#btnSaveItem").prop('disabled',true);
         }
     });
-    
     /*Item ends*/
 
     /*Add Item*/
@@ -783,6 +808,8 @@
 </script>
 <script src="db/DB.js"></script>
 <script src="controller/CustomerController.js"></script>
+<script src="controller/ItemController.js"></script>
+<script src="model/Item.js"></script>
 <script src="model/Customer.js"></script>
 </body>
 </html>
