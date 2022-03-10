@@ -48,6 +48,7 @@ function bindTableEvents(){
             deleteCustomer(cusId);
             $(this).remove();
             clearCusForm();
+            loadCustIds();
         }else {
 
         }
@@ -77,6 +78,14 @@ function loadAllCustomers() {
         let row = `<tr><td>${customer.getCustomerId()}</td><td>${customer.getCustomerName()}</td><td>${customer.getAddress()}</td><td>${customer.getSalary()}</td></tr>`;
         $("#tblCust").append(row);
     }
+}
+
+function getAllCustomers() {
+    let custIds = new Array();
+    for (var customer of customerDB){
+        custIds.push(customer.getCustomerId());
+    }
+    return custIds;
 }
 
 function clearTable() {

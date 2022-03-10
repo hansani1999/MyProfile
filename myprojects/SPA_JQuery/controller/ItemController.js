@@ -62,6 +62,7 @@ function bindItemTableEvents() {
             clearItemForm();
             deleteItem(itemCode);
             $(this).remove();
+            loadItemIds();
         } else {
 
         }
@@ -74,6 +75,14 @@ function loadAllItems() {
         let row = `<tr><td>${item.getItemCode()}</td><td>${item.getDescription()}</td><td>${item.getPrice()}</td><td>${item.getQty()}</td></tr>`;
         $("#tblItem").append(row);
     }
+}
+
+function getItemIds() {
+    var itemIds = new Array();
+    for (var item of itemDB) {
+        itemIds.push(item.getItemCode());
+    }
+    return itemIds;
 }
 
 function clearItemForm(){
