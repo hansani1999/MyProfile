@@ -33,7 +33,7 @@ function OrderDetail(orderId,itemCode,description,price,qty,oQty) {
     this.getPrice = function () {
         return _price;
     }
-    this.getOQty = function () {
+    this.getOrderQty = function () {
         return _oQty;
     }
 }

@@ -82,3 +82,11 @@ function clearForms(){
     $("#lblTotal").text("");
     $("#lblSubTotal").text("");
 }
+
+function searchOrder(orderId) {
+    for (var order of orderDB){
+        if (order.getOrderId()==orderId){
+            console.log(order.getOrderId(),order.getCusId(),order.getCost(),order.getDate());
+        }
+    }
+}

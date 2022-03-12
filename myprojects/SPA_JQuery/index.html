@@ -493,6 +493,7 @@
         }
     });
 
+
     /*Customer Update Starts*/
     $("#btnUpdate").on('click',function () {
         let cusId= $("#cid").val();
@@ -856,7 +857,7 @@
         let orderQty = $("#oQty").val();
         let itemTotal = itemPrice*orderQty;
 
-        let oid = $("oid").val();
+        let oid = $("#oid").val();
         var cartItem = new CartItem(oid,itemCode,description,itemPrice,orderQty,itemTotal);
 
         var response = ifExistsItem(itemCode);
@@ -908,17 +909,12 @@
         let cusId = $("#txtCid").val();
         let cost = $("#lblSubTotal").text();
 
-        var orderDTO = new OrderDTO(orderId,orderDate,cusId,cost);
+        var orderDTO = new OrderDTO(orderId,cusId,orderDate,cost);
         var orderDetailList = new Array();
 
         for (var cItem of cart){
             orderDetailList.push(
-                new OrderDetail(
-                    cItem.getOrderId(),
-                    cItem.getItemCode(),
-                    cItem.getDescription(),
-                    cItem.getPrice(),
-                    cItem.getQty())
+                new OrderDetail(cItem.getOrderId(), cItem.getItemCode(), cItem.getDescription(), cItem.getPrice(), cItem.getQty())
             );
         }
 
@@ -948,6 +944,26 @@
             alert("Order Placed Successfully!");
         }
     });
+
+
+    /*Search Order Starts*/
+    $("#oid").keyup(function (event) {
+        if(event.key=="Enter"){
+            let searchId = $("#oid").val();
+            searchOrder(searchId);
+
+            var list = searchOrderDetail(searchId);
+            if (list){
+                for (var i of list){
+                    console.log(i.getItemCode(),i.getDescription(),i.getPrice(),i.getOrderQty());
+                }
+            }else {
+                alert("Not found");
+            }
+
+        }
+    });
+    /*Search Order Ends*/
 
     function clearCart() {
         while(cart.length>0){
