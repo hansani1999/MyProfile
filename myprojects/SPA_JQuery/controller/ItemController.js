@@ -85,6 +85,10 @@ function getItemIds() {
     return itemIds;
 }
 
+function updateQty(orderDetailList) {
+
+}
+
 function clearItemForm(){
     $("#itemCode").val("");
     $("#newItemName").val("");

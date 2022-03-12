@@ -59,3 +59,26 @@ function loadCartItems() {
         $("#tblCart").append(row);
     }
 }
+
+function addOrder(orderDTO) {
+    orderDB.push(orderDTO);
+}
+
+function clearCartTable() {
+    $("#tblCart>tbody>tr").empty();
+}
+
+function clearForms(){
+    //$("#cid").val("");
+    $("#name").val("");
+    $("#address").val("");
+    $("#salary").val("");
+    $("#itemName").val("");
+    $("#txtPrice").val("");
+    $("#qty").val("");
+    $("#txtCash").val("");
+    $("#txtBalance").val("");
+    $("#txtDiscount").val("");
+    $("#lblTotal").text("");
+    $("#lblSubTotal").text("");
+}

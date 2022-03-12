@@ -1,10 +1,14 @@
-function CartItem(itemCode,description,price,qty,total) {
+function CartItem(orderId,itemCode,description,price,qty,total) {
+    var _orderId = orderId;
     var _itemCode = itemCode;
     var _description = description;
     var _price = price;
     var _qty = qty;
     var _total = total;
 
+    this.setOrderId = function (orderId) {
+        _orderId =orderId;
+    }
     this.setItemCode = function (code) {
         _itemCode = code;
     }
@@ -19,6 +23,9 @@ function CartItem(itemCode,description,price,qty,total) {
     }
     this.setTotal = function (total) {
         _total= total;
+    }
+    this.getOrderId = function () {
+        return _orderId;
     }
     this.getItemCode = function () {
         return _itemCode;
