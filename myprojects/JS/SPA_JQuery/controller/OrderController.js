@@ -69,13 +69,16 @@ function clearCartTable() {
 }
 
 function clearForms(){
-    //$("#cid").val("");
+    $("#oid").val("");
+    $("#txtCid").val("");
+    $("#code").val("");
     $("#name").val("");
     $("#address").val("");
     $("#salary").val("");
     $("#itemName").val("");
     $("#txtPrice").val("");
     $("#qty").val("");
+    $("#oQty").val("");
     $("#txtCash").val("");
     $("#txtBalance").val("");
     $("#txtDiscount").val("");
@@ -87,6 +90,7 @@ function searchOrder(orderId) {
     for (var order of orderDB){
         if (order.getOrderId()==orderId){
             console.log(order.getOrderId(),order.getCusId(),order.getCost(),order.getDate());
+            return order;
         }
     }
 }

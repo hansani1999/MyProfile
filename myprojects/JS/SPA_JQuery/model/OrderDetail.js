@@ -1,4 +1,4 @@
-function OrderDetail(orderId,itemCode,description,price,qty,oQty) {
+function OrderDetail(orderId,itemCode,description,price,oQty) {
     var _orderId = orderId;
     var _itemCode = itemCode;
     var _description = description;

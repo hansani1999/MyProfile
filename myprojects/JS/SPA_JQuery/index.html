@@ -820,9 +820,29 @@
         //$("#txtCash").css('border','2px solid red');
     });
 
+    $("#txtDiscount").keyup(function (event){
+        calcDiscount();
+        //$("#txtCash").css('border','2px solid red');
+    });
+
+    function calcDiscount() {
+        var cost = $("#lblTotal").text();
+        var discount = parseInt($("#txtDiscount").val());
+        var subTotal = cost.split("/")[0]-discount;
+        if (!$("#txtDiscount").val()){
+            $("#lblSubTotal").text(cost);
+        }else {
+            $("#lblSubTotal").text(subTotal+"/=");
+        }
+    }
+
     function calcBalance() {
         var balance = parseInt($("#txtCash").val())-parseInt($("#lblSubTotal").text());
-        $("#txtBalance").val(balance);
+        if(!$("#txtCash").val()){
+            $("#txtBalance").val("");
+        }else {
+            $("#txtBalance").val(balance);
+        }
     }
     /*$(".txtODItemInput").keyup(function (event) {
         if(regItemName.test($("#itemName").val())){
@@ -859,6 +879,7 @@
 
         let oid = $("#oid").val();
         var cartItem = new CartItem(oid,itemCode,description,itemPrice,orderQty,itemTotal);
+        console.log("OrderQty : "+orderQty);
 
         var response = ifExistsItem(itemCode);
         console.log(response);
@@ -908,14 +929,16 @@
         let orderDate = $("#txtDate").val();
         let cusId = $("#txtCid").val();
         let cost = $("#lblSubTotal").text();
+        let discount = $("#txtDiscount").val();
 
-        var orderDTO = new OrderDTO(orderId,cusId,orderDate,cost);
+        var orderDTO = new OrderDTO(orderId,cusId,cost,orderDate,discount);
         var orderDetailList = new Array();
 
         for (var cItem of cart){
             orderDetailList.push(
                 new OrderDetail(cItem.getOrderId(), cItem.getItemCode(), cItem.getDescription(), cItem.getPrice(), cItem.getQty())
             );
+            console.log("OrderQty : "+cItem.getQty());
         }
 
         let costValue = cost.split("/")[0];
@@ -950,12 +973,28 @@
     $("#oid").keyup(function (event) {
         if(event.key=="Enter"){
             let searchId = $("#oid").val();
-            searchOrder(searchId);
-
+            var order = searchOrder(searchId);
             var list = searchOrderDetail(searchId);
+
+            var cid = order.getCusId();
+
+            var customer = searchCustomer(cid);
+
+            $("#txtDate").text(order.getDate());
+            $("#txtCid").val(customer.getCustomerId());
+            $("#name").val(customer.getCustomerName());
+            $("#address").val(customer.getAddress());
+            $("#salary").val(customer.getSalary());
+            var total = parseInt(order.getCost())+parseInt(order.getDiscount());
+            $("#lblTotal").text(total+"/=");
+            $("#lblSubTotal").text(order.getCost());
+
             if (list){
                 for (var i of list){
-                    console.log(i.getItemCode(),i.getDescription(),i.getPrice(),i.getOrderQty());
+                    var tot = parseInt(i.getPrice())*parseInt(i.getOrderQty());
+                    //console.log(i.getItemCode(),i.getDescription(),i.getPrice(),i.getOrderQty());
+                    let row = `<tr><td>${i.getItemCode()}</td><td>${i.getDescription()}</td><td>${i.getPrice()}</td><td>${i.getOrderQty()}</td><td>${tot}</td></tr>`;
+                    $("#tblCart").append(row);
                 }
             }else {
                 alert("Not found");
