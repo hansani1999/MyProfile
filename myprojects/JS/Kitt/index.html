@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <title>KITT</title>
     <style>
-        body{
+        body {
             background-color: black;
         }
 
-        #section1{
+        #section1 {
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        #section1>section{
+        #section1 > section {
             height: 50px;
             flex-basis: 150px;
             position: relative;
@@ -24,7 +24,7 @@
             margin-right: 3px;
         }
 
-        button{
+        button {
             position: relative;
             top: 400px;
             width: 100px;
@@ -38,12 +38,12 @@
             color: white;
         }
 
-        #btnStart{
+        #btnStart {
             background-color: royalblue;
             border: 3px solid darkgray;
         }
 
-        #btnStop{
+        #btnStop {
             background-color: #ff253a;
             border: 3px solid lightcoral;
         }
@@ -52,63 +52,77 @@
     </style>
 </head>
 <body>
-    <section id="section1">
-        <section id="b1"></section>
-        <section id="b2"></section>
-        <section id="b3"></section>
-        <section id="b4"></section>
-        <section id="b5"></section>
-        <section id="b6"></section>
-        <section id="b7"></section>
-    </section>
-    <button id="btnStart">Start</button>
-    <button id="btnStop">Stop</button>
-        <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
-        <script>
-            var colors = ["#1d1212","#880000","#A80000","#FF0000","#A80000","#880000","#1d1212"];
-            let x=0;
-            let y=0;
-            let interval1;
+<audio id="theme">
+    <source src="assets/audio/kitt.mp3" type="audio/mpeg">
+</audio>
 
-            $("#btnStart").click(function () {
-                clearInterval(interval1);
-                interval1=setInterval(colorsInOut,50);
-            });
+<section id="section1">
+    <section id="b1"></section>
+    <section id="b2"></section>
+    <section id="b3"></section>
+    <section id="b4"></section>
+    <section id="b5"></section>
+    <section id="b6"></section>
+    <section id="b7"></section>
+</section>
+<button id="btnStart">Start</button>
+<button id="btnStop">Stop</button>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    var colors = ["#1d1212", "#880000", "#A80000", "#FF0000", "#A80000", "#880000", "#1d1212"];
+    let x = 0;
+    let y = 0;
+    let interval1;
 
-            $("#btnStop").click(function () {
-                clearInterval(interval1);
-            });
+    $("#btnStart").click(function () {
+        clearInterval(interval1);
+        interval1 = setInterval(colorsInOut, 45);
+        playAudio();
+    });
 
-            function colorsInOut() {
-                if (x<colors.length*2){
-                    $("#b7").css('background-color',colors[x]);
-                    $("#b6").css('background-color',colors[x-1]);
-                    $("#b5").css('background-color',colors[x-2]);
-                    $("#b4").css('background-color',colors[x-3]);
-                    $("#b3").css('background-color',colors[x-4]);
-                    $("#b2").css('background-color',colors[x-5]);
-                    $("#b1").css('background-color',colors[x-6]);
-                    x++;
-                    y=0;
-                }
+    $("#btnStop").click(function () {
+        clearInterval(interval1);
+        pauseAudio();
+    });
 
-                if (x==colors.length*2){
-                    if (y<colors.length*2){
-                        $("#b7").css('background-color',colors[y-6]);
-                        $("#b6").css('background-color',colors[y-5]);
-                        $("#b5").css('background-color',colors[y-4]);
-                        $("#b4").css('background-color',colors[y-3]);
-                        $("#b3").css('background-color',colors[y-2]);
-                        $("#b2").css('background-color',colors[y-1]);
-                        $("#b1").css('background-color',colors[y]);
-                        y++;
+    function colorsInOut() {
+        if (x < colors.length * 2) {
+            $("#b7").css('background-color', colors[x]);
+            $("#b6").css('background-color', colors[x - 1]);
+            $("#b5").css('background-color', colors[x - 2]);
+            $("#b4").css('background-color', colors[x - 3]);
+            $("#b3").css('background-color', colors[x - 4]);
+            $("#b2").css('background-color', colors[x - 5]);
+            $("#b1").css('background-color', colors[x - 6]);
+            x++;
+            y = 0;
+        }
 
-                        if (y==colors.length*2){
-                            x=0;
-                        }
-                    }
+        if (x == colors.length * 2) {
+            if (y < colors.length * 2) {
+                $("#b7").css('background-color', colors[y - 6]);
+                $("#b6").css('background-color', colors[y - 5]);
+                $("#b5").css('background-color', colors[y - 4]);
+                $("#b4").css('background-color', colors[y - 3]);
+                $("#b3").css('background-color', colors[y - 2]);
+                $("#b2").css('background-color', colors[y - 1]);
+                $("#b1").css('background-color', colors[y]);
+                y++;
+
+                if (y == colors.length * 2) {
+                    x = 0;
                 }
             }
-        </script>
+        }
+    }
+    var a = $("#theme")[0];
+
+    function playAudio() {
+        a.play();
+    }
+    function pauseAudio() {
+        a.pause();
+    }
+</script>
 </body>
 </html>
