@@ -1,4 +1,4 @@
-#My Profile
+# My Profile
 
  **MyProfile** is a portfolio website elaborating an overview of my skills as an undergraduate in Software Engineering,
  my education, other activities and interests as an individual.
